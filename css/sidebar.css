@@ -118,9 +118,12 @@ a {
 }
 
 /* Add padding body*/
+/*
 .body-pd {
     padding: 2rem 0 0 16rem;
 }
+*/
+/*사이드바 열었을시 body width 줄어드는거 없앰*/
 
 /* Active links menu */
 .active {
