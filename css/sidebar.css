@@ -106,6 +106,7 @@ a {
 
 .nav__icon {
     font-size: 1.25rem;
+    color: var(--white-color);
 }
 
 .nav_name {
