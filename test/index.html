@@ -22,6 +22,8 @@
             
             .sidebar{
                 position: fixed;
+                top: 0;
+                left: 0;
                 height: 100vh;
                 width: var(--sidebar-width);
                 background-color: var(--first-color);
@@ -33,6 +35,7 @@
             }
             .sidebar a{
                 cursor: pointer;
+                text-decoration: none;
             }
             
             .sidebar.expanded{
@@ -62,25 +65,29 @@
             
             
             
-            .sidebar-link{
-                white-space: nowrap;
-            }
-            .sidebar-icon{
-                width: calc(var(--sidebar-width) - 3rem);
-                text-align: center;
-                font-size: 1.25rem;
-            }
-            .sidebar-name{
-                margin-left: 0.5rem;
-            }
             .sidebar-content{
                 position: relative;
                 width: calc(var(--sidebar-width) + 9.25rem - 3rem);
                 border-radius: 5px;
-                margin-bottom: 0.5em;
-                display: flex;
+                margin-bottom: 1em;
+                display: block;
                 justify-content: space-between;
                 align-items: center;
+            }
+            .sidebar-content::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 3px;
+                height: 0;
+                border-radius: 5px;
+                background-color: blue;
+                transition: all 0.2s ease-in-out;
+            }
+            .sidebar-content:hover::before{
+                content: '';
+                height: 2.25rem;
             }
             .sidebar-content.active::before{
                 content: '';
@@ -91,6 +98,20 @@
                 height: 2.25rem;
                 border-radius: 5px;
                 background-color: blue;
+            }
+
+            .sidebar-link{
+                white-space: nowrap;
+                display: flex;
+                align-items: center;
+            }
+            .sidebar-icon{
+                width: calc(var(--sidebar-width) - 3rem);
+                text-align: center;
+                font-size: 1.25rem;
+            }
+            .sidebar-name{
+                margin-left: 0.5rem;
             }
             
             .sidebar-link{
@@ -103,13 +124,13 @@
                 justify-content: space-between;
             }
             .sidebar-link-expandBtn{
-                display: flex;
                 width: 2em;
                 height: 2em;
                 display: flex;
-                justify-content: space-between;
+                justify-content: center;
                 align-items: center;
                 cursor: pointer;
+                transition: all 0.5s ease-in-out;
             }
 
 
@@ -126,9 +147,16 @@
                 align-items: center;
                 padding-left: 0.5rem;
                 border-left: 2px solid gray;
+                transition: all 0.2s ease-in-out;
             }
             .sidebar-list-element.active{
                 border-left: 2px solid blue;
+            }
+            .sidebar-list-element:hover{
+                border-left-width: 5px;
+            }
+            .sidebar-list-element-link{
+                text-decoration: none;
             }
             
             .sidebar.expanded .sidebar-list.expanded .sidebar-list-element{
@@ -138,9 +166,14 @@
                 text-decoration: none;
             }
 
+            .rotate {
+                transform: rotate(180deg);
+                transition: .5s;
+            }
 
 
-            main{
+
+            body{
                 margin-left: var(--sidebar-width);
             }
             </style>
@@ -148,90 +181,106 @@
     <body>
         <div class="sidebar">
             <div class="sidebar-container">
-                
+
+
                 <div class="sidebar-header">
-                    <div onclick="expandSidebar()" class="btn-expand-sidebar">
-                        <i class="fas fa-bars"></i>
+                    <div class="btn-expand-sidebar">
+                        <ion-icon name="menu-outline" class="sidebar-icon"></ion-icon>
                     </div>
-                    <a class="sidebar-header-link" href="/asdf">
+                    <a class="sidebar-header-link" href="/FlyingSpaghettiMonster">
                         <h3>
                             온라인 박물관
                         </h3>
                     </a>
                 </div>
 
+
                 <div class="sidebar-content active">
-                    <a class="sidebar-link">
-                        <i class="fas fa-home sidebar-icon"></i>
-                        <span class="sidebar-name">asdf</span>
+                    <a href="/FlyingSpaghettiMonster/#" class="sidebar-link">
+                        <ion-icon name="home-outline" class="sidebar-icon"></ion-icon>
+                        <span class="sidebar-name">홈페이지</span>
                     </a>
                 </div>
+
 
                 <div class="sidebar-content">
-                    <a class="sidebar-link">
-                        <i class="fas fa-home sidebar-icon"></i>
-                        <span class="sidebar-name">asdf</span>
+                    <div class="sidebar-contents-wrapper">
+                        <a href="/FlyingSpaghettiMonster/gallary" class="sidebar-link">
+                            <ion-icon name="images-outline" class="sidebar-icon"></ion-icon>
+                            <span class="sidebar-name">갤러리</span>
+                        </a>
+                        <div class="sidebar-link-expandBtn">
+                            <ion-icon name="chevron-down-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <ul class="sidebar-list">
+                        <li class="sidebar-list-element">
+                            <a class="sidebar-list-element-link">르네상스</a>
+                        </li>
+                        <li class="sidebar-list-element">
+                            <a class="sidebar-list-element-link">현대미술</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="sidebar-content">
+                    <div class="sidebar-contents-wrapper">
+                        <a href="/FlyingSpaghettiMonster/heritage" class="sidebar-link">
+                            <ion-icon name="bonfire-outline" class="sidebar-icon"></ion-icon>
+                            <span class="sidebar-name">3D 유뮬 조회</span>
+                        </a>
+                        <div class="sidebar-link-expandBtn">
+                            <ion-icon name="chevron-down-outline"></ion-icon>
+                        </div>
+                    </div>
+                    <ul class="sidebar-list">
+                        <li class="sidebar-list-element active">
+                            <a class="sidebar-list-element-link">불교</a>
+                        </li>
+                        <li class="sidebar-list-element">
+                            <a class="sidebar-list-element-link">기독교</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="sidebar-content">
+                    <a href="/FlyingSpaghettiMonster/contact" class="sidebar-link">
+                        <ion-icon name="code-slash-outline" class="sidebar-icon"></ion-icon>
+                        <span class="sidebar-name">만든 사람들</span>
                     </a>
                 </div>
 
-                <div class="sidebar-content" style="display: block;">
-                    <div class="sidebar-contents-wrapper">
-                        <a class="sidebar-link">
-                            <i class="fas fa-home sidebar-icon"></i>
-                            <span class="sidebar-name">asdf</span>
-                        </a>
-                        <div class="sidebar-link-expandBtn">
-                            <i class="fas fa-bars"></i>
-                        </div>
-                    </div>
-                    <ul class="sidebar-list">
-                        <li class="sidebar-list-element">asfd</li>
-                        <li class="sidebar-list-element">asfd</li>
-                        <li class="sidebar-list-element">asfd</li>
-                    </ul>
-                </div>
-
-                <div class="sidebar-content" style="display: block;">
-                    <div class="sidebar-contents-wrapper" style="display: flex;">
-                        <a class="sidebar-link">
-                            <i class="fas fa-home sidebar-icon"></i>
-                            <span class="sidebar-name">asdf</span>
-                        </a>
-                        <div class="sidebar-link-expandBtn">
-                            <i class="fas fa-bars"></i>
-                        </div>
-                    </div>
-                    <ul class="sidebar-list">
-                        <li class="sidebar-list-element active">asfd</li>
-                        <li class="sidebar-list-element">asfd</li>
-                        <li class="sidebar-list-element">asfd</li>
-                    </ul>
-                </div>
 
             </div>
         </div>
 
 
-        <main style="">
+        <main>
             asdfasdkfjlaksdfjasdfasdfsadfsdfasadfasdf
             <h1>asdfjklsdjfklajflksjdlskzf</h1>
         </main>
 
 
         <script>
-            function expandSidebar(){
+            //사이드바 확장
+            document.getElementsByClassName("btn-expand-sidebar")[0].addEventListener('click', function(){
                 document.getElementsByClassName("sidebar")[0].classList.toggle("expanded")
-            }
+            })
 
+            //사이드바 안 요소 확장
             const elements = document.getElementsByClassName("sidebar-link-expandBtn")
             var i
             for(i=0; i<elements.length; i++){
                 elements[i].addEventListener('click', function(){
                     this.parentNode.nextElementSibling.classList.toggle('expanded')
+                    this.classList.toggle('rotate')
                 })
             }
             
         </script>
+        <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
         <script src="https://kit.fontawesome.com/bfa60ca031.js" crossorigin="anonymous"></script>
     </body>
 </html>

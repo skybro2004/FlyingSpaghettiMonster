@@ -1,38 +1,14 @@
-/* EXPANDER MENU */
-const showMenu = (toggleId, navbarId, bodyId) => {
-    const toggle = document.getElementById(toggleId),
-    navbar = document.getElementById(navbarId),
-    bodypadding = document.getElementById(bodyId)
+//사이드바 확장
+document.getElementsByClassName("btn-expand-sidebar")[0].addEventListener('click', function(){
+    document.getElementsByClassName("sidebar")[0].classList.toggle("expanded")
+})
 
-    if( toggle && navbar ) {
-        toggle.addEventListener('click', ()=>{
-            navbar.classList.toggle('expander');
-
-            bodypadding.classList.toggle('body-pd')
-        })
-    }
-}
-
-showMenu('nav-toggle', 'navbar', 'body-pd')
-
-/* LINK ACTIVE */
-const linkColor = document.querySelectorAll('.nav__link')
-function colorLink() {
-    linkColor.forEach(l=> l.classList.remove('active'))
-    this.classList.add('active')
-}
-linkColor.forEach(l=> l.addEventListener('click', colorLink))
-
-/* COLLAPSE MENU */
-const linkCollapse = document.getElementsByClassName('collapse__link')
+//사이드바 안 요소 확장
+const elements = document.getElementsByClassName("sidebar-link-expandBtn")
 var i
-
-for(i=0;i<linkCollapse.length;i++) {
-    linkCollapse[i].addEventListener('click', function(){
-        const collapseMenu = this.nextElementSibling
-        collapseMenu.classList.toggle('showCollapse')
-
-        const rotate = collapseMenu.previousElementSibling
-        rotate.classList.toggle('rotate')
-    });
+for(i=0; i<elements.length; i++){
+    elements[i].addEventListener('click', function(){
+        this.parentNode.nextElementSibling.classList.toggle('expanded')
+        this.classList.toggle('rotate')
+    })
 }

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/FlyingSpaghettiMonster/css/sidebar.css">
+    <link rel="stylesheet" href="/FlyingSpaghettiMonster/css/heritage.css">
+    <title>Astronaut</title>
+</head>
+<body>
+    <!--사이드바-->
+    <div class="sidebar">
+        <div class="sidebar-container">
+
+
+            <div class="sidebar-header">
+                <div class="btn-expand-sidebar">
+                    <ion-icon name="menu-outline" class="sidebar-icon"></ion-icon>
+                </div>
+                <a class="sidebar-header-link" href="/FlyingSpaghettiMonster">
+                    <h3>
+                        온라인 박물관
+                    </h3>
+                </a>
+            </div>
+
+
+            <div class="sidebar-content active">
+                <a href="/FlyingSpaghettiMonster/#" class="sidebar-link">
+                    <ion-icon name="home-outline" class="sidebar-icon"></ion-icon>
+                    <span class="sidebar-name">홈페이지</span>
+                </a>
+            </div>
+
+
+            <div class="sidebar-content">
+                <div class="sidebar-contents-wrapper">
+                    <a href="/FlyingSpaghettiMonster/gallary" class="sidebar-link">
+                        <ion-icon name="images-outline" class="sidebar-icon"></ion-icon>
+                        <span class="sidebar-name">갤러리</span>
+                    </a>
+                    <div class="sidebar-link-expandBtn">
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </div>
+                </div>
+                <ul class="sidebar-list">
+                    <li class="sidebar-list-element">
+                        <a class="sidebar-list-element-link">르네상스</a>
+                    </li>
+                    <li class="sidebar-list-element">
+                        <a class="sidebar-list-element-link">현대미술</a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="sidebar-content">
+                <div class="sidebar-contents-wrapper">
+                    <a href="/FlyingSpaghettiMonster/heritage" class="sidebar-link">
+                        <ion-icon name="bonfire-outline" class="sidebar-icon"></ion-icon>
+                        <span class="sidebar-name">3D 유뮬 조회</span>
+                    </a>
+                    <div class="sidebar-link-expandBtn">
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </div>
+                </div>
+                <ul class="sidebar-list">
+                    <li class="sidebar-list-element">
+                        <a class="sidebar-list-element-link">불교</a>
+                    </li>
+                    <li class="sidebar-list-element">
+                        <a class="sidebar-list-element-link">기독교</a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="sidebar-content">
+                <a href="/FlyingSpaghettiMonster/contact" class="sidebar-link">
+                    <ion-icon name="code-slash-outline" class="sidebar-icon"></ion-icon>
+                    <span class="sidebar-name">만든 사람들</span>
+                </a>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    
+    <!--main-->
+    <header>
+    </header>
+    <main>
+        <!--간단한 정보(제목, 모델, 표)-->
+        <div class="info">
+            <div class="info-text">
+
+                <!--제목-->
+                <h2 class="info-title">Astronaut Model</h2>
+
+                <!--표-->
+                <div class="info-table">
+                    <!--표 제목-->
+                    <div class="info-table-header">
+                        info
+                    </div>
+                    <!--표-->
+                    <div class="info-table-main">
+
+                        <div class="info-table-main-row">
+                            <div class="info-table-main-col">
+                                File Provider
+                            </div>
+                            <div class="info-table-main-col">
+                                Google
+                            </div>
+                        </div>
+
+                        <div class="info-table-main-row">
+                            <div class="info-table-main-col">
+                                File Extension
+                            </div>
+                            <div class="info-table-main-col">
+                                .glb
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <!--출처-->
+                    <div class="info-table-footer">
+                        Service Provided by <a href="https://modelviewer.dev/">&lt;model-viewer&gt;</a><br>which Provided by Google
+                    </div>
+                </div>
+
+                <!--간단한 설명-->
+                <blockquote class="blockquote">
+                    A simple 3D model Shaped like astronaut<br>
+                    You can look around model by your mouse
+                </blockquote>
+            </div>
+
+
+            <!--모델-->
+            <model-viewer src="./resource/"
+            ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878"
+            poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717"
+            alt="A 3D model of an astronaut"
+            shadow-intensity="1"
+            camera-controls
+            auto-rotate ar></model-viewer>
+        </div>
+
+
+
+        <!--설명-->
+        <div class="description">
+            <p>
+                This is a sample 3D model for <a href="https://modelviewer.dev">&lt;model-viewer&gt;</a>, which is open source javascript library provided by Google. 
+                It is a symbolic model for here, because I planed to make this site when I found this library and sample site.
+                When I saw this awesome library, I wanted to use this library so I looked for where I can use this.
+                then, I came up with idea which is online-museum.
+                When you looking for some heritage, or art, or any object placed in museum, unless you are able to get to a museum, you mostly google that thing or find some book to look into that.
+                But, you can just get shallow information and some pictures that have wierd angle or position so that can't satisfy our purpose.
+                In this case, if we use 3D model to take a look at the object, we can view that in any angle, any position and even we can see what's inside of a object(when if modeler is too sensitive to make a inside of model😀).
+                It can be useful when we search for the any historical research, Especially students that have many chances to search historical resource like us.
+                So That's because I wanted to make online museum that provide 3D model of heritage.
+                Thanks to visit our website and have a great time!
+            </p>
+            <p>
+                Regards<br>Shin Jun - Main developer
+            </p>
+        </div>
+    </main>
+
+
+
+    <!--JS-->
+
+    <!-- IONICONS -->
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    <!--MODELVIEWER-->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <!-- JS -->
+    <script src="/FlyingSpaghettiMonster/js/sidebar.js"></script>
+
+</body>
+</html>

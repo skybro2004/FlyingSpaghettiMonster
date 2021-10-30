@@ -5,63 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="/FlyingSpaghettiMonster/css/sidebar.css">
+    <link rel="stylesheet" href="./css/index.css">
 
     <title>SideBar sub menus</title>
 </head>
 <body id="body-pd">
-    <div class="l-navbar" id="navbar">
-        <nav class="nav">
-            <div>
-                <div class="nav__brand">
-                    <ion-icon name="menu-outline" class="nav__toggle" id="nav-toggle"></ion-icon>
-                    <a href="#" class="nav__logo">사이버-박물관</a>
+    <div class="sidebar">
+        <div class="sidebar-container">
+
+
+            <div class="sidebar-header">
+                <div class="btn-expand-sidebar">
+                    <ion-icon name="menu-outline" class="sidebar-icon"></ion-icon>
                 </div>
-                <div class="nav__list">
-                    <a href="../" class="nav__link">
-                        <ion-icon name="home-outline" class="nav__icon"></ion-icon>
-                        <span class="nav_name">메인페이지</span>
-                    </a>
-                    <a href="#" class="nav__link">
-                        <ion-icon name="mic-circle-outline" class="nav__icon"></ion-icon>
-                        <span class="nav_name">온라인 투어</span>
-                    </a>
-
-                    <div href="#" class="nav__link collapse">
-                        <ion-icon name="library-outline" class="nav__icon"></ion-icon>
-                        <span class="nav_name">갤러리</span>
-
-                        <ion-icon name="chevron-down-outline" class="collapse__link"></ion-icon>
-
-                        <ul class="collapse__menu">
-                            <a href="#" class="collapse__sublink">미술품</a>
-                            <a href="#" class="collapse__sublink">문화유산</a>
-                            <a href="#" class="collapse__sublink">유적지</a>
-                            <a href="../gallary/heritage/Theme1/spaceeeeeee/" class="collapse__sublink">spaceeeeee</a>
-                        </ul>
-                    </div>
-
-                    <a href="#" class="nav__link active">
-                        <ion-icon name="people-outline" class="nav__icon"></ion-icon>
-                        <span class="nav_name">개발자 연락처</span>
-                    </a>
-
-                    <a href="#" class="nav__link">
-                        <ion-icon name="settings-outline" class="nav__icon"></ion-icon>
-                        <span class="nav_name">Settings</span>
-                    </a>
-                </div>
-                <a href="#" class="nav__link">
-                    <ion-icon name="log-out-outline" class="nav__icon"></ion-icon>
-                    <span class="nav_name">Log out</span>
+                <a class="sidebar-header-link" href="/FlyingSpaghettiMonster">
+                    <h3>
+                        온라인 박물관
+                    </h3>
                 </a>
             </div>
-        </nav>
+
+
+            <div class="sidebar-content">
+                <a href="/FlyingSpaghettiMonster/#" class="sidebar-link">
+                    <ion-icon name="home-outline" class="sidebar-icon"></ion-icon>
+                    <span class="sidebar-name">홈페이지</span>
+                </a>
+            </div>
+
+
+            <div class="sidebar-content">
+                <div class="sidebar-contents-wrapper">
+                    <a href="/FlyingSpaghettiMonster/gallary" class="sidebar-link">
+                        <ion-icon name="images-outline" class="sidebar-icon"></ion-icon>
+                        <span class="sidebar-name">갤러리</span>
+                    </a>
+                    <div class="sidebar-link-expandBtn">
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </div>
+                </div>
+                <ul class="sidebar-list">
+                    <li class="sidebar-list-element">
+                        <a class="sidebar-list-element-link">르네상스</a>
+                    </li>
+                    <li class="sidebar-list-element">
+                        <a class="sidebar-list-element-link">현대미술</a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="sidebar-content">
+                <div class="sidebar-contents-wrapper">
+                    <a href="/FlyingSpaghettiMonster/heritage" class="sidebar-link">
+                        <ion-icon name="bonfire-outline" class="sidebar-icon"></ion-icon>
+                        <span class="sidebar-name">3D 유뮬 조회</span>
+                    </a>
+                    <div class="sidebar-link-expandBtn">
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </div>
+                </div>
+                <ul class="sidebar-list">
+                    <li class="sidebar-list-element">
+                        <a class="sidebar-list-element-link">불교</a>
+                    </li>
+                    <li class="sidebar-list-element">
+                        <a class="sidebar-list-element-link">기독교</a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="sidebar-content active">
+                <a href="/FlyingSpaghettiMonster/contact" class="sidebar-link">
+                    <ion-icon name="code-slash-outline" class="sidebar-icon"></ion-icon>
+                    <span class="sidebar-name">만든 사람들</span>
+                </a>
+            </div>
+
+
+        </div>
     </div>
     
     <header class="header" id="top">
         <h1>만든 놈들</h1>
     </header>
+    <!--
     <main>
         <hr>
         <div class="ShinJun" style="margin-top: 2em;">
@@ -83,11 +113,65 @@
         <div style="float: none; margin-top: 2em;">
             asdf
         </div>
+
+
+        
+    </main>
+
+-->
+    <main>
+
+
+        <div class="div-table">
+            <div id="skybro2004" class="div-table-col">
+                <div class="card-member">
+                    <div class="card-member-contents">
+                        <h2>신준</h2>
+                        <p>20821 | 팀장</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="gimanga" class="div-table-col">
+                <div class="card-member">
+                    <div class="card-member-contents">
+                        <h2>김혜진</h2>
+                        <p>20919 | 메인 개발자</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="1illill" class="div-table-col">
+                <div class="card-member">
+                    <div class="card-member-contents">
+                        <h2>원서윤</h2>
+                        
+                        <p>20823 | 디자이너</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="trap567" class="div-table-col">
+                <div class="card-member">
+                    <div class="card-member-contents">
+                        <h2>김종한</h2>
+                        
+                        <p>20815 | 자료수집가</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <!-- IONICONS -->
     <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
     <!-- JS -->
     <script src="../js/sidebar.js"></script>
+    <script>
+        document.getElementById("skybro2004").addEventListener("click", function(){
+            location.href = "https://skybro2004.com"
+        })
+    </script>
 </body>
 </html>

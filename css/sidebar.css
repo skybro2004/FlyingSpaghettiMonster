@@ -1,6 +1,3 @@
-/* GOOGLE FONTS */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
-
 @font-face {
     font-family: 'S-CoreDream-3Light';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
@@ -8,164 +5,179 @@
     font-style: normal;
 }
 
-/* VARIABLES CSS */
-:root {
-    --nav--width: 92px;
-
-    /* Colores */
-    --first-color: #0c5df4;
-    --bg-color: #12192c;
-    --sub-color: #b6cefc;
-    --white-color: #fff;
-
-    /* Fuente y tipografia */
-    --body-font: 'S-CoreDream-3Light', sans-serif;
-    --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-
-    /* z index */
-    --z-fixed: 100;
+:root{
+    --sidebar-width: 92px;
+    --first-color: #121212;
+    --second-color: blue;
+    --font-color:white;
 }
-
-/* BASE */
-*, ::before, ::after {
-    box-sizing: border-box;
-}
-
-body {
-    position: relative;
+*{
     margin: 0;
-    padding: 2rem .75em 0 6.75rem;
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
-    transition: .5s;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'S-CoreDream-3Light', sans-serif;
 }
 
-a {
-    text-decoration: none;
-}
 
-/* l NAV */
-.l-navbar {
+
+.sidebar{
     position: fixed;
     top: 0;
     left: 0;
-    width: var(--nav--width);
     height: 100vh;
-    background-color: var(--bg-color);
-    color: var(--white-color);
+    width: var(--sidebar-width);
+    background-color: var(--first-color);
     padding: 1.5rem 1.5rem 2rem;
-    transition: .5s;
-    z-index: var(--z-fixed);
+    transition: all 0.3s ease-in-out;
+    z-index: 100;
+}
+.sidebar *{
+    color: var(--font-color);
+}
+.sidebar a{
+    cursor: pointer;
+    text-decoration: none;
 }
 
-/* NAV */
-.nav {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.sidebar.expanded{
+    width: calc(var(--sidebar-width) + 9.25rem)
+}
+
+
+.sidebar-container{
+    width: 100%;
     overflow: hidden;
 }
 
-.nav__brand {
-    display: grid;
-    grid-template-columns: max-content max-content;
+
+.sidebar-header{
+    width: calc(var(--sidebar-width) + 9.25rem - 3rem);
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0;
+    margin-bottom: 2em;
+}
+.btn-expand-sidebar{
+    width: calc(var(--sidebar-width) - 3rem);
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.sidebar-content{
+    position: relative;
+    width: calc(var(--sidebar-width) + 9.25rem - 3rem);
+    border-radius: 5px;
+    margin-bottom: 1em;
+    display: block;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2rem;
+}
+.sidebar-content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 0;
+    border-radius: 5px;
+    background-color: blue;
+    transition: all 0.2s ease-in-out;
+}
+.sidebar-content:hover::before{
+    content: '';
+    height: 2.25rem;
+}
+.sidebar-content.active::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 2.25rem;
+    border-radius: 5px;
+    background-color: blue;
 }
 
-.nav__toggle {
-    font-size: 1.25rem;
-    padding: .75rem;
-    cursor: pointer;
-}
-
-.nav__logo {
-    color: var(--white-color);
-    font-weight: 600;
-}
-
-.nav__link {
-    display: grid;
-    grid-template-columns: max-content max-content;
+.sidebar-link{
+    white-space: nowrap;
+    display: flex;
     align-items: center;
-    column-gap: .75rem;
-    padding: .75rem;
-    color: var(--white-color);
-    border-radius: .5rem;
-    margin-bottom: 1rem;
-    transition: .3s;
-    cursor: pointer;
 }
-
-.nav__link:hover {
-    background-color: var(--first-color);
-}
-
-.nav__icon {
+.sidebar-icon{
+    width: calc(var(--sidebar-width) - 3rem);
+    text-align: center;
     font-size: 1.25rem;
-    color: var(--white-color);
+}
+.sidebar-name{
+    margin-left: 0.5rem;
 }
 
-.nav_name {
-    font-size: var(--small-font-size);
+.sidebar-link{
+    padding: 0.5em 0;
+    width: 100%;
+}
+.sidebar-contents-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sidebar-link-expandBtn{
+    width: 2em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
 }
 
-/* Expander menu */
-.expander {
-    width: calc(var(--nav--width) + 9.25rem);
+
+.sidebar-list{
+    margin-left: calc(var(--sidebar-width) - 2.5rem);
+    position: relative;
 }
 
-/* Add padding body*/
-/*
-.body-pd {
-    padding: 2rem 0 0 16rem;
+.sidebar-list-element{
+    overflow-y: hidden;
+    height: 0;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem;
+    border-left: 2px solid gray;
+    transition: all 0.2s ease-in-out;
 }
-*/
-/*사이드바 열었을시 body width 줄어드는거 없앰*/
-
-/* Active links menu */
-.active {
-    background-color: var(--first-color);
+.sidebar-list-element.active{
+    border-left: 2px solid blue;
 }
-
-/* COLLAPSE */
-.collapse {
-    grid-template-columns: 20px max-content 1fr;
+.sidebar-list-element:hover{
+    border-left-width: 5px;
 }
-
-.collapse__link {
-    justify-self: flex-end;
-    transition: .5;
+.sidebar-list-element-link{
+    text-decoration: none;
 }
 
-.collapse__menu {
-    display: none;
-    padding: .75rem 2.25rem;
-    margin: 0.5em;
-    padding: 0;
-    list-style: none;
+.sidebar.expanded .sidebar-list.expanded .sidebar-list-element{
+    height: 1.5em;
+}
+.sidebar-header-link{
+    text-decoration: none;
 }
 
-.collapse__sublink {
-    color: var(--sub-color);
-    font-size: var(--small-font-size);
-    white-space:nowrap;
-}
-
-.collapse__sublink:hover {
-    color: var(--white-color);
-}
-
-/* Show collapse */
-.showCollapse {
-    display: block;
-}
-
-/* Rotate icon */
 .rotate {
     transform: rotate(180deg);
     transition: .5s;
+}
+
+
+
+body{
+    margin-left: var(--sidebar-width);
 }

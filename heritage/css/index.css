@@ -1,0 +1,9 @@
+header{
+    padding: 1em;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
