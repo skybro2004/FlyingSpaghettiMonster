@@ -63,7 +63,7 @@
                     <div class="sidebar-contents-wrapper">
                         <a href="/FlyingSpaghettiMonster/heritage" class="sidebar-link">
                             <ion-icon name="bonfire-outline" class="sidebar-icon"></ion-icon>
-                            <span class="sidebar-name">3D 유물 조회</span>
+                            <span class="sidebar-name">3D 유뮬 조회</span>
                         </a>
                         <div class="sidebar-link-expandBtn">
                             <ion-icon name="chevron-down-outline"></ion-icon>
@@ -96,27 +96,28 @@
         <!--메인-->
         <!--여기서부터 작성하면 됨-->
         <header>
-            <h3>3D 유물 조회</h3>
+            <h3>불교 유물</h3>
             <div class="title">
                 <h1>
-                    테마 선택
+                    유물 선택
                 </h1>
             </div>
         </header>
+        
+        <div class="search">
+            <label>
+                필터 : 
+                <input type="text" id="search" onkeyup="filter()" placeholder="키워드를 입력하세요">
+            </label>
+        </div>
+        <div class="list">
+            <div class="list-element listner">개성 남계원지 칠층석탑</div>
+            <div class="list-element listner">보령 성주사지 오층석탑</div>
+            <div class="list-element listner">손종로정충비각</div>
+            <div class="list-element listner">안양 중초사지 당간지주</div>
+            <div class="list-element listner">청양 읍내리 석조여래삼존입상</div>
+        </div>
 
-        <main>
-            <div id="buddhism" class="card-content card-glass">
-                <div class="thumbnail"></div>
-                <h2>불교</h2>
-                <p>불교 관련 유물들을 모은 카테고리입니다.</p>
-            </div>
-
-            <div id="christian" class="card-content card-glass">
-                <div class="thumbnail"></div>
-                <h2>기독교</h2>
-                <p>기독교 관련 유물들을 모은 카테고리입니다.</p>
-            </div>
-        </main>
 
 
 
@@ -127,13 +128,27 @@
         <!-- JS -->
         <script src="/FlyingSpaghettiMonster/js/sidebar.js"></script>
         <script>
-            const themes = document.getElementsByClassName("card-content")
-            for(var i=0; i<themes.length; i++){
-                const theme = themes[i]
-                theme.addEventListener("click", function(){
-                    location.href = "./" + theme.getAttribute("id")
+            function filter(){
+                let search = document.getElementById("search").value.toLowerCase()
+                let listner = document.getElementsByClassName("listner")
+
+                for(var i=0; i<listner.length; i++){
+                    if(listner[i].innerHTML.toLowerCase().includes(search)){
+                        listner[i].style.display = "block"
+                    }
+                    else{
+                        listner[i].style.display = "none"
+                    }
+                }
+            }
+
+            let listElement =  document.getElementsByClassName("list-element")
+            for(var i=0; i<listElement.length; i++){
+                listElement[i].addEventListener("click", function(){
+                    location.href = "./" + this.innerHTML
                 })
             }
+
         </script>
     </body>
 

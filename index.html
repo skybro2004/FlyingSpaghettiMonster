@@ -64,7 +64,7 @@
                     <div class="sidebar-contents-wrapper">
                         <a href="/FlyingSpaghettiMonster/heritage" class="sidebar-link">
                             <ion-icon name="bonfire-outline" class="sidebar-icon"></ion-icon>
-                            <span class="sidebar-name">3D 유뮬 조회</span>
+                            <span class="sidebar-name">3D 유물 조회</span>
                         </a>
                         <div class="sidebar-link-expandBtn">
                             <ion-icon name="chevron-down-outline"></ion-icon>
@@ -100,25 +100,36 @@
             <h1>온라인 박물관</h1>
         </header>
         <main>
-            <div class="mainpage-contents card-glass">
-                <i class="icon-contentspreview fas fa-image"></i>
-                <h3>갤러리</h3>
+            <div class="div-table">
+                <div class="div-table-col">
+                    <div id="gallary" class="mainpage-contents card-glass">
+                        <i class="icon-contentspreview fas fa-image"></i>
+                        <h3>갤러리</h3>
+                    </div>
+                </div>
+                
+                <div class="div-table-col">
+                    <div id="heritage" class="mainpage-contents card-glass">
+                        <i class="icon-contentspreview fas fa-ankh"></i>
+                        <h3>3D 유물 조회</h3>
+                    </div>
+                </div>
+
+                <div class="div-table-col">
+                    <div id="tour" class="mainpage-contents card-glass">
+                        <i class="icon-contentspreview fas fa-flag"></i>
+                        <h3>온라인 투어</h3>
+                    </div>
+                </div>
+                
+                <div class="div-table-col">
+                    <div id="contact" class="mainpage-contents card-glass">
+                        <i class="icon-contentspreview fas fa-code"></i>
+                        <h3>만든 사람들</h3>
+                    </div>
+                </div>
             </div>
 
-            <div class="mainpage-contents card-glass">
-                <i class="icon-contentspreview fas fa-ankh"></i>
-                <h3>3D 유물 조회</h3>
-            </div>
-
-            <div class="mainpage-contents card-glass">
-                <i class="icon-contentspreview fas fa-flag"></i>
-                <h3>온라인 투어</h3>
-            </div>
-
-            <div class="mainpage-contents card-glass">
-                <i class="icon-contentspreview fas fa-code"></i>
-                <h3>만든 사람들</h3>
-            </div>
 
         </main>
         <!--/메인-->
@@ -131,5 +142,14 @@
         <script src="https://kit.fontawesome.com/bfa60ca031.js" crossorigin="anonymous"></script>
         <!-- JS -->
         <script src="/FlyingSpaghettiMonster/js/sidebar.js"></script>
+        <script>
+            let mainpageCards =  document.getElementsByClassName("mainpage-contents")
+            for(var i=0; i<mainpageCards.length; i++){
+                console.log(mainpageCards[i])
+                mainpageCards[i].addEventListener("click", function(){
+                    location.href = "./" + this.getAttribute("id")
+                })
+            }
+        </script>
     </body>
 </html>

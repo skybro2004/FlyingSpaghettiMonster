@@ -1,9 +1,62 @@
+.card-glass{
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 6px );
+    -webkit-backdrop-filter: blur( 6px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    transition: all 0.5s;
+}
+.card-glass:hover{
+    box-shadow: 0 16px 32px 0 rgba( 31, 38, 135, 0.6 );
+}
+
+
+body{
+    padding: 2em;
+}
+
 header{
-    padding: 1em;
+    margin-bottom: 3em;
 }
 .title{
     display: flex;
     justify-content: center;
     margin-top: 2em;
     margin-bottom: 1em;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.card-content{
+    width: 15em;
+    height: 20em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+}
+
+.thumbnail{
+    background-image: url("https://media.discordapp.net/attachments/864387205036245083/904244361196363786/buddah_2.jpg");
+    width: 12em;
+    height: 16em;
+    background-size: 100%;
+    background-position: center;
+    transition: all 0.5s;
+}
+#buddhism .thumbnail{
+    background-image: url("https://media.discordapp.net/attachments/864387205036245083/904244361196363786/buddah_2.jpg");
+}
+#christian .thumbnail{
+    background-image: url("https://media.discordapp.net/attachments/864387205036245083/904247212924633158/cross_2.jpg");
+}
+.card-content:hover .thumbnail{
+    background-size: 110%;
 }
