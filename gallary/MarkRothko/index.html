@@ -3,11 +3,14 @@
     <head>
         <meta charset='utf-8'>
         <link rel="stylesheet" href="/FlyingSpaghettiMonster/css/sidebar.css">
-        <link rel="stylesheet" href="./css/index.css">
+        <link rel="stylesheet" href="/FlyingSpaghettiMonster/css/art.css">
 
         <title>
             갤러리
         </title>
+        <style>
+            /*style*/
+        </style>
     </head>
     <body>
         
@@ -91,48 +94,42 @@
 
 
         <header>
-            <h3>갤러리</h3>
-            <div class="title">
+            <h3>추상표현주의 화가</h3>
+            <div class = "title">
                 <h1>
-                    작가 선택
+                    Mark Rothko
                 </h1>
             </div>
         </header>
 
         <main>
-            <div id= "노천웅" class="card-content">
-                <div class="card-title-prev">
-                    <h3>노천웅</h3>
-                </div>
-                <div class="card-title">
-                    <h3>노천웅</h3>
-                </div>
-            </div>
-
-            <div id= "MarkRothko" class="card-content">
-                <div class="card-title-prev">
-                    <h3>Mark Rothko</h3>
-                </div>
-                <div class="card-title">
-                    <h3>Mark Rothko</h3>
+            <hr>
+            <div class="content-style2">
+                <img src=>
+                <div class="content-wrapper">
+                    <h2>Untitled (Black on Grey)</h2>
+                    <p>an acrylic on canvas painting(1969) </p>
+                    <p>검은색 직사각형과 회색 직사각형의 그림입니다. 얇고 반투명한 레이어가 서로 다르게 음영 처리 된 검정색으로, 밝고 따뜻합니다.</p>
                 </div>
             </div>
-
-            <div id= "Banksy" class="card-content">
-                <div class="card-title-prev">
-                    <h3>Banksy</h3>
+            <hr>
+            
+            <div class="content-style1">
+                <img src=>
+                <div class="title">
+                    <h2>Four Darks in Red</h2>
+                    <p>1958년, 259.1 cm x 294.6 cm, Whitney Museum of American Art, New York 소장
+                    </p>
                 </div>
-                <div class="card-title">
-                    <h3>Banksy</h3>
-                </div>
+                <p>Sidney Janis Gallery 에서 전시한 10점의 그림 중 하나</p>
             </div>
-
-            <div id= "experimental" class="card-content">
-                <div class="card-title-prev">
-                    <h3>테스트</h3>
-                </div>
-                <div class="card-title">
-                    <h3>테스트</h3>
+            <hr>
+            <div class="content-style2">
+                <img src=>
+                <div class="content-wrapper">
+                    <h2>Green and Maroon</h2>
+                    <p>캔버스에 유채(1953),232cm x 140cm , 워싱턴 D.C The Phillips Collection 소장 </p>
+                    <p> </p>
                 </div>
             </div>
         </main>
@@ -142,13 +139,5 @@
         <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
         <!-- JS -->
         <script src="/FlyingSpaghettiMonster/js/sidebar.js"></script>
-        <script>
-            let artists = document.getElementsByClassName("card-content")
-            for(var i=0; i<artists.length; i++){
-                artists[i].addEventListener("click", function(){
-                    location.href = "./" + this.getAttribute("id")
-                })
-            }
-        </script>
     </body>
 </html>

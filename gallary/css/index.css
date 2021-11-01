@@ -1,0 +1,102 @@
+body{
+    min-height: 100vh;
+    padding: 2em;
+    background: url("https://cdn.wallpaperhub.app/cloudcache/2/f/d/7/1/a/2fd71a4ca851c574a1251709330dfe5b5d8cd450.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-position-x: left;
+}
+
+
+header{
+    width: 100%;
+    margin-bottom: 3em;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+
+.card-content{
+    position: relative;
+    width: 15em;
+    height: 20em;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    background-size: 100%;
+    background-position: center;
+    overflow: hidden;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+#노천웅.card-content{
+    background-image: url("https://media.discordapp.net/attachments/864387205036245083/904550045381181472/99604C475EFBEA1E26.png");
+}
+#MarkRothko{
+    background-image: url("https://media.discordapp.net/attachments/864387205036245083/904550030927618098/20211101_104113.jpg");
+}
+#Banksy.card-content{
+    background-image: url("https://media.discordapp.net/attachments/864387205036245083/904550013198290984/20211101_101910.jpg");
+}
+.card-content:hover{
+    background-size: 110%;
+    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.6);
+}
+
+.card-title-prev{
+    position: absolute;
+    right: 0;
+    bottom: 2em;
+    padding: 1em;
+    color: white;
+}
+
+.card-title{
+    position: absolute;
+    right: -10em;
+    bottom: 2em;
+    width: 10em;
+    padding: 1em;
+    background-color: white;
+    transition: all 0.4s ease-in-out;
+}
+.card-title p{
+    margin: 1em;
+}
+.card-content:hover .card-title{
+    left: auto;
+    right: 0;
+}
+
+
+.drawing{
+    width: 12em;
+    height: 16em;
+    background-size: 100%;
+    background-position: center;
+    transition: all 0.5;
+
+}

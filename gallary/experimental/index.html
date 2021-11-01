@@ -3,10 +3,10 @@
     <head>
         <meta charset='utf-8'>
         <link rel="stylesheet" href="/FlyingSpaghettiMonster/css/sidebar.css">
-        <link rel="stylesheet" href="./css/index.css">
+        <link rel="stylesheet" href="./style.css">
 
         <title>
-            갤러리
+            Layout test
         </title>
     </head>
     <body>
@@ -88,53 +88,78 @@
             </div>
         </div>
 
-
+        
 
         <header>
-            <h3>갤러리</h3>
-            <div class="title">
-                <h1>
-                    작가 선택
-                </h1>
+            <div class="page-title">
+                <h1 class="artist-name">Banksy</h1>
+                <div style="width: 20rem;">
+                    <h1 style="display: inline; font-size: 2.5rem;">Sub title</h1>
+                    <p style="margin-bottom: 4rem; margin-top: 2rem; font-size: 1.2rem;">description description description description description description description description description description description description description description description description </p>
+                    <h3>목차</h3>
+                    <div class="index">
+                        <ol>
+                            <li><a href="#Balloon-Girl">Balloon Girl</a></li>
+                            <li><a href="#Nola">Nola (Girl with Umbrella)</a></li>
+                            <li><a href="#Rage-The-Flower-Thrower">Rage, the Flower Thrower</a></li>
+                        </ol>
+                    </div> 
+
+                </div>
             </div>
+
         </header>
 
+
         <main>
-            <div id= "노천웅" class="card-content">
-                <div class="card-title-prev">
-                    <h3>노천웅</h3>
-                </div>
-                <div class="card-title">
-                    <h3>노천웅</h3>
+            <hr id="Balloon-Girl">
+
+            <div class="content-style1">
+                <img src="https://artsy-media-uploads.s3.amazonaws.com/8XHw3cywjGpGZiF1fEW4Gw%2Fcustom-Custom_Size___2840632113_d56b9fb20f_o+2.jpg">
+                <div class="content-wrapper">
+                    <div class="title">
+                        <h2>Balloon Girl</h2>
+                        <p>2002년 Waterloo Bridge in South Bank</p>
+                    </div>
+                    <p> 바람에 휩쓸리는 빨간 하트 모양의 풍선을 향해 손을 뻗은 어린 소녀를 묘사합니다</p>
                 </div>
             </div>
 
-            <div id= "MarkRothko" class="card-content">
-                <div class="card-title-prev">
-                    <h3>Mark Rothko</h3>
-                </div>
-                <div class="card-title">
-                    <h3>Mark Rothko</h3>
+            <hr id="Nola">
+
+            <div class="content-style2">
+                <img src="https://media.discordapp.net/attachments/864387205036245083/904566404475412530/43e1b80ee64748d0b573f9dc2a41f27d_2.jpg">
+                <div class="content-wrapper">
+                    <h2>Nola (Girl with Umbrella)</h2>
+                    <p>2008년 streets of the Marigny neighbourhood in the city of New Orleans, Louisiana</p>
+                    <p>우산 내부에서 비가 내려 혼란한 어린 소녀를 묘사합니다. 허리케인 카트리나에 큰 침수 피해를 입었던 미국의 뉴올리언스 지역을 모티브로 합니다.</p>
                 </div>
             </div>
 
-            <div id= "Banksy" class="card-content">
-                <div class="card-title-prev">
-                    <h3>Banksy</h3>
-                </div>
-                <div class="card-title">
-                    <h3>Banksy</h3>
-                </div>
-            </div>
+            <hr id="Rage-The-Flower-Thrower">
 
-            <div id= "experimental" class="card-content">
-                <div class="card-title-prev">
-                    <h3>테스트</h3>
-                </div>
-                <div class="card-title">
-                    <h3>테스트</h3>
+            <div class="content-style2 reverse">
+                <img src="https://i.pinimg.com/originals/05/5e/95/055e95a3a137b31d0504bce47c2118bb.jpg">
+                <div class="content-wrapper">
+                    <h2>Rage, the Flower Thrower</h2>
+                    <p>2005년 a wall on the side of a garage in Jerusalem on the main road to Beit Sahour, Bethlehem</p>
+                    <p>한 남자가 복면으로 얼굴을 가리고, 모자를 거꾸로 쓰고 꽃다발을 든 채로 화염병을 던지는 듯한 자세를 취합니다. 평화란 적극적이고 고된 노력에 따라 이루어질 수 있음을 전합니다.</p>
                 </div>
             </div>
+            
+            <hr>
+            
+            <div class="content-style1">
+                <img src="https://i.pinimg.com/originals/db/b5/a0/dbb5a0f9c0145655762e0344194c2f76.jpg">
+                <div class="content-wrapper">
+                    <div class="title">
+                        <h2>Rage, the Flower Thrower</h2>
+                        <p>2005년 a wall on the side of a garage in Jerusalem on the main road to Beit Sahour, Bethlehem</p>
+                    </div>
+                    <p>한 남자가 복면으로 얼굴을 가리고, 모자를 거꾸로 쓰고 꽃다발을 든 채로 화염병을 던지는 듯한 자세를 취합니다. 평화란 적극적이고 고된 노력에 따라 이루어질 수 있음을 전합니다.</p>
+                </div>
+            </div>
+            
         </main>
 
 
@@ -142,13 +167,5 @@
         <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
         <!-- JS -->
         <script src="/FlyingSpaghettiMonster/js/sidebar.js"></script>
-        <script>
-            let artists = document.getElementsByClassName("card-content")
-            for(var i=0; i<artists.length; i++){
-                artists[i].addEventListener("click", function(){
-                    location.href = "./" + this.getAttribute("id")
-                })
-            }
-        </script>
     </body>
 </html>

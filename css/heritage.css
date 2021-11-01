@@ -84,3 +84,14 @@ model-viewer {
     padding: 30px;
     
 }
+
+.description p{
+    margin-bottom: 1em;
+}
+.description p:last-child{
+    margin-bottom: 0;
+}
+.footnote{
+    margin-bottom: 0;
+    font-size: 0.9em;
+}

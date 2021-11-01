@@ -1,5 +1,5 @@
 .card-glass{
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     backdrop-filter: blur( 6px );
     -webkit-backdrop-filter: blur( 6px );
     border-radius: 10px;
@@ -7,7 +7,7 @@
     transition: all 0.5s;
 }
 .card-glass:hover{
-    box-shadow: 0 16px 32px 0 rgba( 31, 38, 135, 0.6 );
+    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.6);
 }
 
 
@@ -41,6 +41,7 @@ main{
     padding: 1em;
     margin-right: 1em;
     margin-bottom: 1em;
+    cursor: pointer;
 }
 
 .thumbnail{
