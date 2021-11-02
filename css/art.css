@@ -1,12 +1,8 @@
-body{
+main{
     padding: 2em;
 }
 
 
-header{
-    width: 100%;
-    margin-bottom: 3em;
-}
 header .title{
     display: flex;
     flex-direction: column;
@@ -17,39 +13,36 @@ header .title{
 }
 
 
-hr{
-    margin-bottom: 2em
-}
-
 
 .content-style1{
     width: 100%;
-    padding: 1em 10%;
+    height: 100vh;
+    padding: 2em 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .content-style1 img{
     width: 100%;
     border: 2px solid black;
-    margin-bottom: 1.5em;
 }
-.content-style1 .title{
+.content-style1 .content-wrapper{
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-bottom: 1em;
-}
-.content-style1 p{
     margin-bottom: 1em;
 }
 
 
 .content-style2{
     width: 100%;
-    padding: 1em 10%;
+    height: 100vh;
+    padding: 3em 10%;
     display: flex;
     flex-direction: row;
-    margin-bottom: 2em;
 }
 .content-style2 img{
+    height: 100%;
     border: 2px solid black;
     margin-right: 3em;
 }
@@ -71,13 +64,34 @@ hr{
     margin-left: 3em;
 }
 
-/*
-.drawing{
-    width: 80em;
-    height: 80em;
-    background-size: 100%;
-    background-position: center;
-    transition: all 0.5;
 
+.content-style3{
+    width: 100%;
+    height: 100vh;
+    padding: 3em 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
-*/
+.content-style3 .content-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.content-style3.reverse .content-wrapper{
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+.content-style3 .content-wrapper h2{
+    margin-bottom: 1.5em;
+}
+.content-style3 .content-wrapper img{
+    border: 2px solid black;
+    width: 50%;
+    height: auto;
+    margin-right: 2em;
+}
+.content-style3.reverse .content-wrapper img{
+    margin-right: 0;
+    margin-left: 2em;
+}

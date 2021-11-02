@@ -1,12 +1,9 @@
-html{
-    scroll-behavior: smooth;
-}
-
 header{
     background-image: url("https://media.discordapp.net/attachments/864387205036245083/904651767109812284/banksy_2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: right;
+    min-height: 100vh;
 }
 header *{
     color: white;
@@ -18,7 +15,6 @@ header *{
     height: 100%;
     padding: 3em;
     padding-left: 13rem;
-    min-height: 100vh;
 }
 .page-title .artist-name{
     position: absolute;

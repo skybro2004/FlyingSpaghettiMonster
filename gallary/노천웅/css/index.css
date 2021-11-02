@@ -1,0 +1,54 @@
+header{
+    background-image: url("http://www.jbnews.com/news/photo/202103/1331345_1127247_4355.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.page-title{
+    width: fit-content;
+    height: 100vh;
+    background-color: white;
+}
+.page-title .artist-name{
+    display: block;
+    font-size: 5rem;
+    font-weight: normal;
+    padding: 1rem;
+    color: white;
+    width: fit-content;
+    background-color: #EB2D28;
+}
+.page-title .title-info{
+    width: 100%;
+    padding: 0.5rem;
+}
+.title-info .title-description{
+    margin: 1rem 0;
+    width: 15em;
+    word-break: keep-all;
+}
+.title-info h3{
+    padding-left: 1rem;
+}
+
+.index{
+    width: 15rem;
+    padding: 1rem;
+    padding-left: 2rem;
+}
+.index li{
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+.index li a{
+    color: black;
+    text-decoration: none;
+    word-break: keep-all;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.index li a:hover{
+    color: #EB2D28;
+}

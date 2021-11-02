@@ -9,6 +9,9 @@ body{
     flex-direction: column;
     padding-bottom: 5vh;
     height: 100vh;
+    background-image: url("https://media.discordapp.net/attachments/864387205036245083/905090817541152788/andrej-lisakov-3A4XZUopCJA-unsplash.jpg");
+    background-position: bottom;
+    background-size: cover;
 }
 
 header{

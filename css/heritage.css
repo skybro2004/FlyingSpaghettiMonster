@@ -73,8 +73,8 @@ h2{
 model-viewer {
     width:inherit;
     height: inherit;
-    background-color: #00000000;
-    --poster-color: #00000000;
+    background-color: #DFE1E3;
+    --poster-color: #DFE1E3;
     border: 3px solid black;
     border-radius: 5px;
 }
