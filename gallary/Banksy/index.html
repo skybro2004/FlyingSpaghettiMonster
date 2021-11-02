@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset='utf-8'>
+
+        <meta charset="UTF-8">
+
+        <!--Favicon-->
+        <link rel="icon" href="/FlyingSpaghettiMonster/resources/favicon.ico" type="image/x-icon">
+
+        <!--title-->
+        <title>Banksy</title>
+
+        <!-- CSS -->
         <link rel="stylesheet" href="/FlyingSpaghettiMonster/css/sidebar.css">
         <link rel="stylesheet" href="/FlyingSpaghettiMonster/css/art.css">
         <link rel="stylesheet" href="./css/index.css">
 
-        <title>
-            Banksy
-        </title>
     </head>
+
+
+
     <body>
-        
+
+
+
+        <!--사이드바-->
         <div class="sidebar">
             <div class="sidebar-container">
 
@@ -20,12 +32,48 @@
                     <div class="btn-expand-sidebar">
                         <ion-icon name="menu-outline" class="sidebar-icon"></ion-icon>
                     </div>
-                    <a class="sidebar-header-link" href="/FlyingSpaghettiMonster">
+                    <a href="/FlyingSpaghettiMonster">
                         <h3>
                             온라인 박물관
                         </h3>
                     </a>
                 </div>
+
+
+                <!--
+                한줄짜리
+                <div class="sidebar-content {active}">
+                    <a href="/FlyingSpaghettiMonster/#" class="sidebar-link">
+                        <ion-icon name="home-outline" class="sidebar-icon"></ion-icon> 페이지 아이콘
+                        <span class="sidebar-name">{페이지 이름}</span>
+                    </a>
+                </div>
+                -->
+
+
+                <!--
+                여러줄짜리(확장형)
+                <div class="sidebar-content {active}">
+                    <div class="sidebar-contents-wrapper">
+                        <a href="/FlyingSpaghettiMonster/gallary" class="sidebar-link">
+                            <ion-icon name="images-outline" class="sidebar-icon"></ion-icon> 페이지 아이콘
+                            <span class="sidebar-name">{페이지 이름}</span>
+                        </a>
+                        <div class="sidebar-link-expandBtn">
+                            <ion-icon name="chevron-down-outline"></ion-icon>
+                        </div>
+                    </div>
+
+                    <ul class="sidebar-list">
+                        <li class="sidebar-list-element {active}">
+                            <a>{세부 페이지 이름}</a>
+                        </li>
+                        <li class="sidebar-list-element {active}">
+                            <a>{세부 페이지 이름}</a>
+                        </li>
+                    </ul>
+                </div>
+                -->
 
 
                 <div class="sidebar-content">
@@ -46,12 +94,16 @@
                             <ion-icon name="chevron-down-outline"></ion-icon>
                         </div>
                     </div>
+
                     <ul class="sidebar-list">
                         <li class="sidebar-list-element">
-                            <a class="sidebar-list-element-link">르네상스</a>
+                            <a href="/FlyingSpaghettiMonster/gallary/노천웅">노천웅</a>
                         </li>
                         <li class="sidebar-list-element">
-                            <a class="sidebar-list-element-link">현대미술</a>
+                            <a href="/FlyingSpaghettiMonster/gallary/MarkRothko/">Mark Rothko</a>
+                        </li>
+                        <li class="sidebar-list-element active">
+                            <a href="/FlyingSpaghettiMonster/gallary/Banksy">Banksy</a>
                         </li>
                     </ul>
                 </div>
@@ -67,12 +119,13 @@
                             <ion-icon name="chevron-down-outline"></ion-icon>
                         </div>
                     </div>
+
                     <ul class="sidebar-list">
                         <li class="sidebar-list-element">
-                            <a class="sidebar-list-element-link">불교</a>
+                            <a href="/FlyingSpaghettiMonster/heritage/buddhism">불교</a>
                         </li>
                         <li class="sidebar-list-element">
-                            <a class="sidebar-list-element-link">기독교</a>
+                            <a href="/FlyingSpaghettiMonster/heritage/christian">기독교</a>
                         </li>
                     </ul>
                 </div>
@@ -88,9 +141,12 @@
 
             </div>
         </div>
+        <!--/사이드바-->
 
 
 
+
+        <!--아티스트 소개-->
         <header>
             <div class="page-title">
                 <h1 class="artist-name">Banksy</h1>
@@ -98,23 +154,20 @@
                     <h1 class="subtitle">그래피티 아티스트</h1>
                     <p class="title-description">가장 예술적인 테러리스트</p>
                     <h3>목차</h3>
-                    
                     <ol class="index">
                         <li><a href="#1">Balloon Girl</a></li>
                         <li><a href="#2">Nola (Girl with Umbrella)</a></li>
                         <li><a href="#3">Rage, the Flower Thrower</a></li>
                     </ol>
-                
-
                 </div>
             </div>
-
         </header>
+
+
 
         <main>
 
             <hr id="1">
-
             <div class="content-style1">
                 <img src="https://artsy-media-uploads.s3.amazonaws.com/8XHw3cywjGpGZiF1fEW4Gw%2Fcustom-Custom_Size___2840632113_d56b9fb20f_o+2.jpg">
                 <div class="content-wrapper">
@@ -124,8 +177,8 @@
                 <p> 바람에 휩쓸리는 빨간 하트 모양의 풍선을 향해 손을 뻗은 어린 소녀를 묘사합니다</p>
             </div>
 
-            <hr id="2">
 
+            <hr id="2">
             <div class="content-style2">
                 <img src="https://media.discordapp.net/attachments/864387205036245083/904566404475412530/43e1b80ee64748d0b573f9dc2a41f27d_2.jpg">
                 <div class="content-wrapper">
@@ -135,8 +188,8 @@
                 </div>
             </div>
 
-            <hr id="3">
 
+            <hr id="3">
             <div class="content-style2 reverse">
                 <img src="https://i.pinimg.com/originals/05/5e/95/055e95a3a137b31d0504bce47c2118bb.jpg">
                 <div class="content-wrapper">
@@ -145,7 +198,7 @@
                     <p>한 남자가 복면으로 얼굴을 가리고, 모자를 거꾸로 쓰고 꽃다발을 든 채로 화염병을 던지는 듯한 자세를 취합니다. 평화란 적극적이고 고된 노력에 따라 이루어질 수 있음을 전합니다.</p>
                 </div>
             </div>
-            
+
         </main>
 
 

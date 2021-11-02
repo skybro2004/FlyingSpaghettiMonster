@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset='utf-8'>
+
+        <meta charset="UTF-8">
+
+        <!--Favicon-->
+        <link rel="icon" href="/FlyingSpaghettiMonster/resources/favicon.ico" type="image/x-icon">
+
+        <!--title-->
+        <title>갤러리</title>
+
+        <!-- CSS -->
         <link rel="stylesheet" href="/FlyingSpaghettiMonster/css/sidebar.css">
         <link rel="stylesheet" href="./css/index.css">
 
-        <title>
-            갤러리
-        </title>
     </head>
     <body>
-        
+
+
+        <!--사이드바-->
         <div class="sidebar">
             <div class="sidebar-container">
 
@@ -19,12 +27,48 @@
                     <div class="btn-expand-sidebar">
                         <ion-icon name="menu-outline" class="sidebar-icon"></ion-icon>
                     </div>
-                    <a class="sidebar-header-link" href="/FlyingSpaghettiMonster">
+                    <a href="/FlyingSpaghettiMonster">
                         <h3>
                             온라인 박물관
                         </h3>
                     </a>
                 </div>
+
+
+                <!--
+                한줄짜리
+                <div class="sidebar-content {active}">
+                    <a href="/FlyingSpaghettiMonster/#" class="sidebar-link">
+                        <ion-icon name="home-outline" class="sidebar-icon"></ion-icon> 페이지 아이콘
+                        <span class="sidebar-name">{페이지 이름}</span>
+                    </a>
+                </div>
+                -->
+
+
+                <!--
+                여러줄짜리(확장형)
+                <div class="sidebar-content {active}">
+                    <div class="sidebar-contents-wrapper">
+                        <a href="/FlyingSpaghettiMonster/gallary" class="sidebar-link">
+                            <ion-icon name="images-outline" class="sidebar-icon"></ion-icon> 페이지 아이콘
+                            <span class="sidebar-name">{페이지 이름}</span>
+                        </a>
+                        <div class="sidebar-link-expandBtn">
+                            <ion-icon name="chevron-down-outline"></ion-icon>
+                        </div>
+                    </div>
+
+                    <ul class="sidebar-list">
+                        <li class="sidebar-list-element {active}">
+                            <a>{세부 페이지 이름}</a>
+                        </li>
+                        <li class="sidebar-list-element {active}">
+                            <a>{세부 페이지 이름}</a>
+                        </li>
+                    </ul>
+                </div>
+                -->
 
 
                 <div class="sidebar-content">
@@ -45,12 +89,16 @@
                             <ion-icon name="chevron-down-outline"></ion-icon>
                         </div>
                     </div>
+
                     <ul class="sidebar-list">
                         <li class="sidebar-list-element">
-                            <a class="sidebar-list-element-link">르네상스</a>
+                            <a href="/FlyingSpaghettiMonster/gallary/노천웅">노천웅</a>
                         </li>
                         <li class="sidebar-list-element">
-                            <a class="sidebar-list-element-link">현대미술</a>
+                            <a href="/FlyingSpaghettiMonster/gallary/MarkRothko/">Mark Rothko</a>
+                        </li>
+                        <li class="sidebar-list-element">
+                            <a href="/FlyingSpaghettiMonster/gallary/Banksy">Banksy</a>
                         </li>
                     </ul>
                 </div>
@@ -66,12 +114,13 @@
                             <ion-icon name="chevron-down-outline"></ion-icon>
                         </div>
                     </div>
+
                     <ul class="sidebar-list">
                         <li class="sidebar-list-element">
-                            <a class="sidebar-list-element-link">불교</a>
+                            <a href="/FlyingSpaghettiMonster/heritage/buddhism">불교</a>
                         </li>
                         <li class="sidebar-list-element">
-                            <a class="sidebar-list-element-link">기독교</a>
+                            <a href="/FlyingSpaghettiMonster/heritage/christian">기독교</a>
                         </li>
                     </ul>
                 </div>
@@ -87,9 +136,11 @@
 
             </div>
         </div>
+        <!--/사이드바-->
 
 
 
+        <!--header-->
         <header>
             <h3>갤러리</h3>
             <div class="title">
@@ -99,8 +150,25 @@
             </div>
         </header>
 
+
+
+        <!--main-->
         <main>
-            <div id= "노천웅" class="card-content">
+
+
+            <!--
+            <div id= "{href}" class="card-content">
+                <div class="card-title-prev">
+                    <h3>{카드 제목}</h3>
+                </div>
+                <div class="card-title">
+                    <h3>{카드 제목}</h3>
+                </div>
+            </div>
+            -->
+
+
+            <div id= "노천웅" onclick="locate(this)" class="card-content">
                 <div class="card-title-prev">
                     <h3>노천웅</h3>
                 </div>
@@ -109,7 +177,8 @@
                 </div>
             </div>
 
-            <div id= "MarkRothko" class="card-content">
+
+            <div id= "MarkRothko" onclick="locate(this)" class="card-content">
                 <div class="card-title-prev">
                     <h3>Mark Rothko</h3>
                 </div>
@@ -118,7 +187,8 @@
                 </div>
             </div>
 
-            <div id= "Banksy" class="card-content">
+
+            <div id= "Banksy" onclick="locate(this)" class="card-content">
                 <div class="card-title-prev">
                     <h3>Banksy</h3>
                 </div>
@@ -129,17 +199,11 @@
         </main>
 
 
+
         <!-- IONICONS -->
         <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
         <!-- JS -->
         <script src="/FlyingSpaghettiMonster/js/sidebar.js"></script>
-        <script>
-            let artists = document.getElementsByClassName("card-content")
-            for(var i=0; i<artists.length; i++){
-                artists[i].addEventListener("click", function(){
-                    location.href = "./" + this.getAttribute("id")
-                })
-            }
-        </script>
+        <script src="/FlyingSpaghettiMonster/js/functions.js"></script>
     </body>
 </html>
