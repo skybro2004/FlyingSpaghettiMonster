@@ -1,7 +1,9 @@
 body{
     min-height: 100vh;
     padding: 2em;
-    background: url("https://cdn.wallpaperhub.app/cloudcache/2/f/d/7/1/a/2fd71a4ca851c574a1251709330dfe5b5d8cd450.png");
+
+    /*배경이미지 설정*/
+    background-image: url("../resources/background.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: bottom;
@@ -9,6 +11,7 @@ body{
 }
 
 
+/*header 레이아웃*/
 header{
     width: 100%;
     margin-bottom: 3em;
@@ -23,6 +26,7 @@ header{
 }
 
 
+/*메인 레이아웃*/
 main{
     display: flex;
     flex-wrap: wrap;
@@ -32,6 +36,7 @@ main{
 }
 
 
+/*카드 디자인*/
 .card-content{
     position: relative;
     width: 15em;
@@ -52,6 +57,7 @@ main{
     cursor: pointer;
 }
 
+/*카드별 배경이미지*/
 #노천웅.card-content{
     background-image: url("https://media.discordapp.net/attachments/864387205036245083/904550045381181472/99604C475EFBEA1E26.png");
 }
@@ -61,11 +67,13 @@ main{
 #Banksy.card-content{
     background-image: url("https://media.discordapp.net/attachments/864387205036245083/904550013198290984/20211101_101910.jpg");
 }
+/*카드 hover시 이펙트*/
 .card-content:hover{
     background-size: 110%;
     box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.6);
 }
 
+/*hover 안했을때 카드 제목 스타일*/
 .card-title-prev{
     position: absolute;
     right: 0;
@@ -73,7 +81,7 @@ main{
     padding: 1em;
     color: white;
 }
-
+/*hover 했을때 카드 제목 스타일*/
 .card-title{
     position: absolute;
     right: -10em;
@@ -86,17 +94,8 @@ main{
 .card-title p{
     margin: 1em;
 }
+/*hover시 .card-title 불러옴*/
 .card-content:hover .card-title{
     left: auto;
     right: 0;
-}
-
-
-.drawing{
-    width: 12em;
-    height: 16em;
-    background-size: 100%;
-    background-position: center;
-    transition: all 0.5;
-
 }

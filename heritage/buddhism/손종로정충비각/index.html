@@ -1,194 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="/FlyingSpaghettiMonster/css/sidebar.css">
-    <link rel="stylesheet" href="/FlyingSpaghettiMonster/css/heritage.css">
-    <title>손종로정충비각</title>
-</head>
-<body>
-    <!--사이드바-->
-    <div class="sidebar">
-        <div class="sidebar-container">
+        <meta charset="UTF-8">
 
+        <!--Favicon-->
+        <link rel="icon" href="/FlyingSpaghettiMonster/resources/favicon.ico" type="image/x-icon">
 
-            <div class="sidebar-header">
-                <div class="btn-expand-sidebar">
-                    <ion-icon name="menu-outline" class="sidebar-icon"></ion-icon>
-                </div>
-                <a class="sidebar-header-link" href="/FlyingSpaghettiMonster">
-                    <h3>
-                        온라인 박물관
-                    </h3>
-                </a>
-            </div>
+        <!--title-->
+        <title>손종로정충비각</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="/FlyingSpaghettiMonster/css/sidebar.css">
+        <link rel="stylesheet" href="/FlyingSpaghettiMonster/css/heritage.css">
+
+    </head>
 
 
-            <div class="sidebar-content">
-                <a href="/FlyingSpaghettiMonster/#" class="sidebar-link">
-                    <ion-icon name="home-outline" class="sidebar-icon"></ion-icon>
-                    <span class="sidebar-name">홈페이지</span>
-                </a>
-            </div>
+
+    <body>
 
 
-            <div class="sidebar-content">
-                <div class="sidebar-contents-wrapper">
-                    <a href="/FlyingSpaghettiMonster/gallary" class="sidebar-link">
-                        <ion-icon name="images-outline" class="sidebar-icon"></ion-icon>
-                        <span class="sidebar-name">갤러리</span>
-                    </a>
-                    <div class="sidebar-link-expandBtn">
-                        <ion-icon name="chevron-down-outline"></ion-icon>
+
+        <!--사이드바-->
+        <div class="sidebar">
+            <div class="sidebar-container">
+
+
+                <div class="sidebar-header">
+                    <div class="btn-expand-sidebar">
+                        <ion-icon name="menu-outline" class="sidebar-icon"></ion-icon>
                     </div>
-                </div>
-                <ul class="sidebar-list">
-                    <li class="sidebar-list-element">
-                        <a class="sidebar-list-element-link">르네상스</a>
-                    </li>
-                    <li class="sidebar-list-element">
-                        <a class="sidebar-list-element-link">현대미술</a>
-                    </li>
-                </ul>
-            </div>
-
-
-            <div class="sidebar-content active">
-                <div class="sidebar-contents-wrapper">
-                    <a href="/FlyingSpaghettiMonster/heritage" class="sidebar-link">
-                        <ion-icon name="bonfire-outline" class="sidebar-icon"></ion-icon>
-                        <span class="sidebar-name">3D 유뮬 조회</span>
+                    <a href="/FlyingSpaghettiMonster">
+                        <h3>
+                            온라인 박물관
+                        </h3>
                     </a>
-                    <div class="sidebar-link-expandBtn">
-                        <ion-icon name="chevron-down-outline"></ion-icon>
-                    </div>
                 </div>
-                <ul class="sidebar-list">
-                    <li class="sidebar-list-element active">
-                        <a class="sidebar-list-element-link">불교</a>
-                    </li>
-                    <li class="sidebar-list-element">
-                        <a class="sidebar-list-element-link">기독교</a>
-                    </li>
-                </ul>
+
+
+                <!--
+                한줄짜리
+                <div class="sidebar-content {active}">
+                    <a href="/FlyingSpaghettiMonster/#" class="sidebar-link">
+                        <ion-icon name="home-outline" class="sidebar-icon"></ion-icon> 페이지 아이콘
+                        <span class="sidebar-name">{페이지 이름}</span>
+                    </a>
+                </div>
+                -->
+
+
+                <!--
+                여러줄짜리(확장형)
+                <div class="sidebar-content {active}">
+                    <div class="sidebar-contents-wrapper">
+                        <a href="/FlyingSpaghettiMonster/gallary" class="sidebar-link">
+                            <ion-icon name="images-outline" class="sidebar-icon"></ion-icon> 페이지 아이콘
+                            <span class="sidebar-name">{페이지 이름}</span>
+                        </a>
+                        <div class="sidebar-link-expandBtn">
+                            <ion-icon name="chevron-down-outline"></ion-icon>
+                        </div>
+                    </div>
+
+                    <ul class="sidebar-list">
+                        <li class="sidebar-list-element {active}">
+                            <a>{세부 페이지 이름}</a>
+                        </li>
+                        <li class="sidebar-list-element {active}">
+                            <a>{세부 페이지 이름}</a>
+                        </li>
+                    </ul>
+                </div>
+                -->
+
+
+                <div class="sidebar-content">
+                    <a href="/FlyingSpaghettiMonster/#" class="sidebar-link">
+                        <ion-icon name="home-outline" class="sidebar-icon"></ion-icon>
+                        <span class="sidebar-name">홈페이지</span>
+                    </a>
+                </div>
+
+
+                <div class="sidebar-content">
+                    <div class="sidebar-contents-wrapper">
+                        <a href="/FlyingSpaghettiMonster/gallary" class="sidebar-link">
+                            <ion-icon name="images-outline" class="sidebar-icon"></ion-icon>
+                            <span class="sidebar-name">갤러리</span>
+                        </a>
+                        <div class="sidebar-link-expandBtn">
+                            <ion-icon name="chevron-down-outline"></ion-icon>
+                        </div>
+                    </div>
+
+                    <ul class="sidebar-list">
+                        <li class="sidebar-list-element">
+                            <a href="/FlyingSpaghettiMonster/gallary/노천웅">노천웅</a>
+                        </li>
+                        <li class="sidebar-list-element">
+                            <a href="/FlyingSpaghettiMonster/gallary/MarkRothko/">Mark Rothko</a>
+                        </li>
+                        <li class="sidebar-list-element">
+                            <a href="/FlyingSpaghettiMonster/gallary/Banksy">Banksy</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="sidebar-content active">
+                    <div class="sidebar-contents-wrapper">
+                        <a href="/FlyingSpaghettiMonster/heritage" class="sidebar-link">
+                            <ion-icon name="bonfire-outline" class="sidebar-icon"></ion-icon>
+                            <span class="sidebar-name">3D 유물 조회</span>
+                        </a>
+                        <div class="sidebar-link-expandBtn">
+                            <ion-icon name="chevron-down-outline"></ion-icon>
+                        </div>
+                    </div>
+
+                    <ul class="sidebar-list active">
+                        <li class="sidebar-list-element">
+                            <a href="/FlyingSpaghettiMonster/heritage/buddhism">불교</a>
+                        </li>
+                        <li class="sidebar-list-element">
+                            <a href="/FlyingSpaghettiMonster/heritage/christian">기독교</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="sidebar-content">
+                    <a href="/FlyingSpaghettiMonster/contact" class="sidebar-link">
+                        <ion-icon name="code-slash-outline" class="sidebar-icon"></ion-icon>
+                        <span class="sidebar-name">만든 사람들</span>
+                    </a>
+                </div>
+
+
             </div>
-
-
-            <div class="sidebar-content">
-                <a href="/FlyingSpaghettiMonster/contact" class="sidebar-link">
-                    <ion-icon name="code-slash-outline" class="sidebar-icon"></ion-icon>
-                    <span class="sidebar-name">만든 사람들</span>
-                </a>
-            </div>
-
-
         </div>
-    </div>
+        <!--/사이드바-->
 
 
-    
-    <!--main-->
-    <header>
-    </header>
-    <main>
-        <!--간단한 정보(제목, 모델, 표)-->
-        <div class="info">
-            <div class="info-text">
 
-                <!--제목-->
-                <h2 class="info-title">손종로정충비각</h2>
+        <!--main-->
+        <header>
+        </header>
+        <main>
+            <!--간단한 정보(제목, 모델, 표)-->
+            <div class="info">
+                <div class="info-text">
 
-                <!--표-->
-                <div class="info-table">
-                    <!--표 제목-->
-                    <div class="info-table-header">
-                        손종로정충비각(孫宗老旌忠碑閣)
-                    </div>
+                    <!--제목-->
+                    <h2 class="info-title">손종로정충비각</h2>
+
                     <!--표-->
-                    <div class="info-table-main">
+                    <div class="info-table">
+                        <!--표 제목-->
+                        <div class="info-table-header">
+                            손종로정충비각(孫宗老旌忠碑閣)
+                        </div>
+                        <!--표-->
+                        <div class="info-table-main">
 
-                        <div class="info-table-main-row">
-                            <div class="info-table-main-col">
-                                분류
+                            <div class="info-table-main-row">
+                                <div class="info-table-main-col">
+                                    분류
+                                </div>
+                                <div class="info-table-main-col">
+                                    기록유산 / 서각류 / 금석각류 / 비
+                                </div>
                             </div>
-                            <div class="info-table-main-col">
-                                기록유산 / 서각류 / 금석각류 / 비
+
+                            <div class="info-table-main-row">
+                                <div class="info-table-main-col">
+                                    소재지
+                                </div>
+                                <div class="info-table-main-col">
+                                    경북 경주시 강동면 양동리 84번지
+                                </div>
                             </div>
+
+                            <div class="info-table-main-row">
+                                <div class="info-table-main-col">
+                                    시대
+                                </div>
+                                <div class="info-table-main-col">
+                                    조선시대
+                                </div>
+                            </div>
+
                         </div>
 
-                        <div class="info-table-main-row">
-                            <div class="info-table-main-col">
-                                소재지
-                            </div>
-                            <div class="info-table-main-col">
-                                경북 경주시 강동면 양동리 84번지
-                            </div>
+                        <!--출처-->
+                        <div class="info-table-footer">
+                            본 저작물은 <a href="https://www.heritage.go.kr/">문화재청</a>의 자료를 참조하여 만들어졌으며, 사용된 모든 자료는 문화재청, 공공데이터포털에서 무료로 다운받을 수 있습니다.
                         </div>
-
-                        <div class="info-table-main-row">
-                            <div class="info-table-main-col">
-                                시대
-                            </div>
-                            <div class="info-table-main-col">
-                                조선시대
-                            </div>
-                        </div>
-
                     </div>
-                    
-                    <!--출처-->
-                    <div class="info-table-footer">
-                        본 저작물은 <a href="https://www.heritage.go.kr/">문화재청</a>의 자료를 참조하여 만들어졌으며, 사용된 모든 자료는 문화재청, 공공데이터포털에서 무료로 다운받을 수 있습니다.
-                    </div>
+
+                    <!--간단한 설명-->
+                    <blockquote class="blockquote">
+                        A simple 3D model Shaped like astronaut<br>
+                        You can look around model by your mouse
+                    </blockquote>
                 </div>
 
-                <!--간단한 설명-->
-                <blockquote class="blockquote">
-                    A simple 3D model Shaped like astronaut<br>
-                    You can look around model by your mouse
-                </blockquote>
+
+                <!--모델-->
+                <model-viewer src="./resources/model.glb"
+                poster="/FlyingSpaghettiMonster/resources/spinner.gif"
+                shadow-intensity="1"
+                camera-controls
+                auto-rotate ar></model-viewer>
             </div>
 
 
-            <!--모델-->
-            <model-viewer src="./resources/model.glb"
-            poster="/FlyingSpaghettiMonster/resources/spinner.gif"
-            shadow-intensity="1"
-            camera-controls
-            auto-rotate ar></model-viewer>
-        </div>
+
+            <!--설명-->
+            <div class="description">
+                <p>
+                    조선 인조 14년(1636) 병자호란이 일어났을 때 나라를 구하기 위해 목숨을 바쳐 싸우다 죽은 손종로(1598∼1636)와 그의 충성스런 노비 억부의 충절을 기리기 위해 세운 비이다.
+                </p>
+
+                <p>
+                    손종로는 광해군 10년(1618) 무과에 급제하여 남포현감을 지낸 분으로 병자호란 때 이천의 쌍령전투에서 그의 노비인 억부와 함께 전사하였는데, 시체를 찾지 못하여 옷과 관으로 제사를 지냈다.
+                </p>
+
+                <p>
+                    정조 7년(1783) 왕의 명을 받아 세워 놓은 비로, 비문은 우승지 이정규가 짓고 정충필이 글씨를 썼다.
+                </p>
+            </div>
+        </main>
 
 
 
-        <!--설명-->
-        <div class="description">
-            <p>
-                조선 인조 14년(1636) 병자호란이 일어났을 때 나라를 구하기 위해 목숨을 바쳐 싸우다 죽은 손종로(1598∼1636)와 그의 충성스런 노비 억부의 충절을 기리기 위해 세운 비이다.
-            </p>
+        <!--JS-->
 
-            <p>
-                손종로는 광해군 10년(1618) 무과에 급제하여 남포현감을 지낸 분으로 병자호란 때 이천의 쌍령전투에서 그의 노비인 억부와 함께 전사하였는데, 시체를 찾지 못하여 옷과 관으로 제사를 지냈다.
-            </p>
+        <!-- IONICONS -->
+        <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+        <!--MODELVIEWER-->
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        <!-- JS -->
+        <script src="/FlyingSpaghettiMonster/js/sidebar.js"></script>
 
-            <p>
-                정조 7년(1783) 왕의 명을 받아 세워 놓은 비로, 비문은 우승지 이정규가 짓고 정충필이 글씨를 썼다.
-            </p>
-        </div>
-    </main>
-
-
-
-    <!--JS-->
-
-    <!-- IONICONS -->
-    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
-    <!--MODELVIEWER-->
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <!-- JS -->
-    <script src="/FlyingSpaghettiMonster/js/sidebar.js"></script>
-
-</body>
+    </body>
 </html>

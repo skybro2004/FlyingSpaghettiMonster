@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset='utf-8'>
+
+        <meta charset="UTF-8">
+
+        <!--Favicon-->
+        <link rel="icon" href="/FlyingSpaghettiMonster/resources/favicon.ico" type="image/x-icon">
+
+        <!--title-->
+        <title>노천웅</title>
+
+        <!-- CSS -->
         <link rel="stylesheet" href="/FlyingSpaghettiMonster/css/sidebar.css">
         <link rel="stylesheet" href="/FlyingSpaghettiMonster/css/art.css">
         <link rel="stylesheet" href="./css/index.css">
 
-        <title>
-            노천웅
-        </title>
     </head>
+
+
+
     <body>
-        
+
+
+
+        <!--사이드바-->
         <div class="sidebar">
             <div class="sidebar-container">
 
@@ -20,12 +32,48 @@
                     <div class="btn-expand-sidebar">
                         <ion-icon name="menu-outline" class="sidebar-icon"></ion-icon>
                     </div>
-                    <a class="sidebar-header-link" href="/FlyingSpaghettiMonster">
+                    <a href="/FlyingSpaghettiMonster">
                         <h3>
                             온라인 박물관
                         </h3>
                     </a>
                 </div>
+
+
+                <!--
+                한줄짜리
+                <div class="sidebar-content {active}">
+                    <a href="/FlyingSpaghettiMonster/#" class="sidebar-link">
+                        <ion-icon name="home-outline" class="sidebar-icon"></ion-icon> 페이지 아이콘
+                        <span class="sidebar-name">{페이지 이름}</span>
+                    </a>
+                </div>
+                -->
+
+
+                <!--
+                여러줄짜리(확장형)
+                <div class="sidebar-content {active}">
+                    <div class="sidebar-contents-wrapper">
+                        <a href="/FlyingSpaghettiMonster/gallary" class="sidebar-link">
+                            <ion-icon name="images-outline" class="sidebar-icon"></ion-icon> 페이지 아이콘
+                            <span class="sidebar-name">{페이지 이름}</span>
+                        </a>
+                        <div class="sidebar-link-expandBtn">
+                            <ion-icon name="chevron-down-outline"></ion-icon>
+                        </div>
+                    </div>
+
+                    <ul class="sidebar-list">
+                        <li class="sidebar-list-element {active}">
+                            <a>{세부 페이지 이름}</a>
+                        </li>
+                        <li class="sidebar-list-element {active}">
+                            <a>{세부 페이지 이름}</a>
+                        </li>
+                    </ul>
+                </div>
+                -->
 
 
                 <div class="sidebar-content">
@@ -46,12 +94,16 @@
                             <ion-icon name="chevron-down-outline"></ion-icon>
                         </div>
                     </div>
+
                     <ul class="sidebar-list">
-                        <li class="sidebar-list-element">
-                            <a class="sidebar-list-element-link">르네상스</a>
+                        <li class="sidebar-list-element active">
+                            <a href="/FlyingSpaghettiMonster/gallary/노천웅">노천웅</a>
                         </li>
                         <li class="sidebar-list-element">
-                            <a class="sidebar-list-element-link">현대미술</a>
+                            <a href="/FlyingSpaghettiMonster/gallary/MarkRothko/">Mark Rothko</a>
+                        </li>
+                        <li class="sidebar-list-element">
+                            <a href="/FlyingSpaghettiMonster/gallary/Banksy">Banksy</a>
                         </li>
                     </ul>
                 </div>
@@ -67,12 +119,13 @@
                             <ion-icon name="chevron-down-outline"></ion-icon>
                         </div>
                     </div>
+
                     <ul class="sidebar-list">
                         <li class="sidebar-list-element">
-                            <a class="sidebar-list-element-link">불교</a>
+                            <a href="/FlyingSpaghettiMonster/heritage/buddhism">불교</a>
                         </li>
                         <li class="sidebar-list-element">
-                            <a class="sidebar-list-element-link">기독교</a>
+                            <a href="/FlyingSpaghettiMonster/heritage/christian">기독교</a>
                         </li>
                     </ul>
                 </div>
@@ -88,9 +141,11 @@
 
             </div>
         </div>
+        <!--/사이드바-->
 
 
 
+        <!--아티스트 소개-->
         <header>
             <div class="page-title">
                 <h1 class="artist-name">노천웅</h1>
@@ -109,20 +164,13 @@
                         <li><a href="#3">Anti-focus 20190426-1 part 3 : The action beyond consciousness</a></li>
                         <li><a href="#4">Anti - Focus 20200527-2</a></li>
                     </ol>
-                    
                 </div>
-
-                <!--
-            <h3>현대미술 작가</h3>
-            <div class = "title">
-                <h1>
-                    노천웅
-                </h1>
-            </div>
-            -->
         </header>
 
+
+
         <main>
+
             <hr id="1">
             <div class="content-style3">
                 <div class="content-wrapper">
@@ -134,9 +182,9 @@
                 </div>
                 <p></p>
             </div>
-            
-            <hr id="2">
 
+
+            <hr id="2">
             <div class="content-style3 reverse">
                 <div class="content-wrapper">
                     <img src="https://cdn.discordapp.com/attachments/882826334701776920/904625296316178472/554d2317_Heart3TheUltracompactCosmos_150x170x35cmcollageofmypaintings2019.png">
@@ -148,8 +196,8 @@
                 <p>"비록 변형된 하트 모양으로 마무리되었지만, 저 작은 작품에는 코스모스의 본질만이 아닌 코스모스의 구체성 또한 담겨있다"-노천웅 작가의 블로그 인용</p>
             </div>
 
+
             <hr id="3">
-            
             <div class="content-style2">
                 <img src="https://mblogthumb-phinf.pstatic.net/MjAyMDAxMTBfMjY3/MDAxNTc4NjEwMTMwNzY3.s0CFuGZ_f71h3bO7FlJevctwoiFxI-nUBSN83KhZrCIg.OegQyOTwu1FRjM2VFsf7Apf0riRSWTr8LRXejCEnDOIg.JPEG.artnk/BE1D0475-0FAA-43B8-A129-D301152D4A38_1_105_c.jpeg?type=w800">
                 <div class="content-wrapper">
@@ -159,8 +207,8 @@
                 </div>
             </div>
 
+
             <hr id="4">
-            
             <div class="content-style3">
                 <div class="content-wrapper">
                     <img src="https://cdn.discordapp.com/attachments/882826334701776920/904630098362245120/IMG_4289.png">
@@ -172,7 +220,6 @@
                 <p>"Anti-focus"는 하나의 관점에 빠지는 순간 놓치게 되는 많은 사실들에 대한 경계의 외침이다.</p>
             </div>
 
-            
         </main>
 
 

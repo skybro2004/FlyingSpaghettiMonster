@@ -60,6 +60,7 @@ h2{
 .info-table-header, .info-table-main-col, .info-table-footer{
     padding: 5px;
 }
+/*짤막한 설명*/
 .blockquote{
     margin: 30px 0 0 0;
     padding: 10px 5px 10px 15px;
@@ -70,6 +71,7 @@ h2{
 
 
 
+/*모델뷰어 사이즈, 레이아웃*/
 model-viewer {
     width:inherit;
     height: inherit;
@@ -80,11 +82,11 @@ model-viewer {
 }
 
 
+/*설명*/
 .description{
     padding: 30px;
     
 }
-
 .description p{
     margin-bottom: 1em;
 }

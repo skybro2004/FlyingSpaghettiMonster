@@ -1,3 +1,4 @@
+/*글래스모피즘 카드 디자인*/
 .card-glass{
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     backdrop-filter: blur( 6px );
@@ -11,9 +12,12 @@
 }
 
 
+
 body{
     padding: 2em;
 }
+
+
 
 header{
     margin-bottom: 3em;
@@ -25,12 +29,18 @@ header{
     margin-bottom: 1em;
 }
 
+
+
 main{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
 }
+
+
+
+/*카드 디자인*/
 .card-content{
     width: 15em;
     height: 20em;
@@ -44,6 +54,7 @@ main{
     cursor: pointer;
 }
 
+/*이미지*/
 .thumbnail{
     background-image: url("https://media.discordapp.net/attachments/864387205036245083/904244361196363786/buddah_2.jpg");
     width: 12em;
@@ -52,12 +63,14 @@ main{
     background-position: center;
     transition: all 0.5s;
 }
+/*카드별 이미지*/
 #buddhism .thumbnail{
-    background-image: url("https://media.discordapp.net/attachments/864387205036245083/904244361196363786/buddah_2.jpg");
+    background-image: url("../resources/buddhism.png");
 }
 #christian .thumbnail{
-    background-image: url("https://media.discordapp.net/attachments/864387205036245083/904247212924633158/cross_2.jpg");
+    background-image: url("../resources/christian.png");
 }
+/*hover 이펙트*/
 .card-content:hover .thumbnail{
     background-size: 110%;
 }

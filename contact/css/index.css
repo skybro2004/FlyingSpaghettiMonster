@@ -1,15 +1,10 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-
 body{
     display: flex;
     min-height: 100vh;
     flex-direction: column;
     padding-bottom: 5vh;
     height: 100vh;
-    background-image: url("https://media.discordapp.net/attachments/864387205036245083/905090817541152788/andrej-lisakov-3A4XZUopCJA-unsplash.jpg");
+    background-image: url("../resources/background.jpg");
     background-position: bottom;
     background-size: cover;
 }
@@ -22,6 +17,7 @@ header{
     align-items: center;
 }
 
+/*테이블 레이아웃*/
 .div-table{
     width: 100%;
     display: table;
@@ -32,24 +28,14 @@ header{
     padding: 0.5em;
 }
 
-#skybro2004 .card-member{
-    background-image: url("https://media.discordapp.net/attachments/864387205036245083/903883451936149514/1627996564408-15.jpg");
-}
-#gimanga .card-member{
-    background-image: url("https://media.discordapp.net/attachments/864387205036245083/903897939657773056/IMG_0206.jpg");
-}
-#illill .card-member{
-    background-image: url("https://media.discordapp.net/attachments/864387205036245083/904334807968923678/IMG_1897.jpg");
-}
-#trap567 .card-member{
-    background-image: url("https://media.discordapp.net/attachments/864387205036245083/904249990698893322/site3_2.jpg");
-}
+
+
+/*카드 디자인*/
 .card-member{
     position: relative;
     width: 100%;
     height: 10em;
     padding-top: 133.33%;
-    
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
@@ -57,10 +43,25 @@ header{
     transition: all 0.5s;
     box-shadow: 0 8px 32px 0 rgba(97, 99, 119, 0.37);
 }
+/*사람별 카드 배경이미지(프사)*/
+#skybro2004 .card-member{
+    background-image: url("../resources/skybro2004.jpg");
+}
+#gimanga .card-member{
+    background-image: url("../resources/gimanga.jpg");
+}
+#illill .card-member{
+    background-image: url("../resources/illill.jpg");
+}
+#trap567 .card-member{
+    background-image: url("../resources/trap567.jpg");
+}
+/*hover시 이펙트*/
 .card-member:hover{
     background-size: 120%;
     box-shadow: 0 16px 32px 0 rgba(97, 99, 119, 0.6);
 }
+/*카드 제목용 하얀박스*/
 .card-member::before{
     content: "";
     position: absolute;
@@ -71,7 +72,7 @@ header{
     border-radius: 0 0 10px 10px;
     transition: all 0.5s;
 }
-
+/*카드 제목*/
 .card-member-contents{
     position: absolute;
     bottom: 0;
