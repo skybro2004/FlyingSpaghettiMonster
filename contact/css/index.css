@@ -30,19 +30,6 @@ header{
 
 
 
-/*카드 디자인*/
-.card-member{
-    position: relative;
-    width: 100%;
-    height: 10em;
-    padding-top: 133.33%;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
-    border-radius: 10px;
-    transition: all 0.5s;
-    box-shadow: 0 8px 32px 0 rgba(97, 99, 119, 0.37);
-}
 /*사람별 카드 배경이미지(프사)*/
 #skybro2004 .card-member{
     background-image: url("../resources/skybro2004.jpg");
@@ -55,6 +42,19 @@ header{
 }
 #trap567 .card-member{
     background-image: url("../resources/trap567.jpg");
+}
+/*카드 디자인*/
+.card-member{
+    position: relative;
+    width: 100%;
+    height: 10em;
+    padding-top: 133.33%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    border-radius: 10px;
+    transition: all 0.5s;
+    box-shadow: 0 8px 32px 0 rgba(97, 99, 119, 0.37);
 }
 /*hover시 이펙트*/
 .card-member:hover{
