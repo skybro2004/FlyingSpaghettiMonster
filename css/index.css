@@ -17,20 +17,28 @@
 
 body{
     min-height: 100vh;
-    /*background: linear-gradient(rgba(214, 214, 214, 0), rgba(214, 214, 214, 1)), url("../resources/geometric-blue-pattern.jpg");*/
     background: linear-gradient(rgba(214, 214, 214, 0.2), rgba(214, 214, 214, 0.1)), url("https://media.discordapp.net/attachments/864387205036245083/904318614180614144/ptn.jpg?width=1124&height=1124");
+
+    /*body 안 요소 가운데정렬*/
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: calc(100% - 92px - 2em);
+
+    /*width 강제지정으로 오른쪽으로 넘어가는 문제 해결*/
+    width: calc(100% - var(--sidebar-width) - 2em);
 }
+
+
 
 header{
-    padding: 1em;
+    padding: 1em 2em;
+    background: rgba( 255, 255, 255, 0.3);
 }
 
 
+
+/*카드당 간격 일정하게 하기 위해 table 사용*/
 .div-table{
     display: table;
     table-layout: fixed;
@@ -41,18 +49,7 @@ header{
     padding: 1em;
 }
 
-
-main{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
-
-.mainpage-header{
-    padding: 1em 2em;
-    background: rgba( 255, 255, 255, 0.3);
-}
-
+/*카드 디자인*/
 .mainpage-contents{
     width: 100%;
     height: 20em;
@@ -60,10 +57,14 @@ main{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    margin: 1em;
     cursor: pointer;
+    transition: all 0.2s;
 }
 
-.icon-contentspreview{
-    font-size: 8em;
+.mainpage-contents img{
+    width: 80%;
+    transition: all 0.2s;
+}
+.mainpage-contents:hover img{
+    width: 90%;
 }

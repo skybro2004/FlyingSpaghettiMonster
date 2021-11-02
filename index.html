@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+
         <meta charset="UTF-8">
 
         <!--Favicon-->
         <link rel="icon" href="/FlyingSpaghettiMonster/resources/favicon.ico" type="image/x-icon">
 
+        <!--title-->
+        <title>온라인 박물관</title>
+
         <!-- CSS -->
         <link rel="stylesheet" href="/FlyingSpaghettiMonster/css/sidebar.css">
         <link rel="stylesheet" href="./css/index.css">
-        <title>온라인 박물관</title>
+
     </head>
-    <body id="body-pd">
+    <body>
+
+
         <!--사이드바-->
         <div class="sidebar">
             <div class="sidebar-container">
@@ -21,12 +27,48 @@
                     <div class="btn-expand-sidebar">
                         <ion-icon name="menu-outline" class="sidebar-icon"></ion-icon>
                     </div>
-                    <a class="sidebar-header-link" href="/FlyingSpaghettiMonster">
+                    <a href="/FlyingSpaghettiMonster">
                         <h3>
                             온라인 박물관
                         </h3>
                     </a>
                 </div>
+
+
+                <!--
+                한줄짜리
+                <div class="sidebar-content {active}">
+                    <a href="/FlyingSpaghettiMonster/#" class="sidebar-link">
+                        <ion-icon name="home-outline" class="sidebar-icon"></ion-icon> 페이지 아이콘
+                        <span class="sidebar-name">{페이지 이름}</span>
+                    </a>
+                </div>
+                -->
+
+
+                <!--
+                여러줄짜리(확장형)
+                <div class="sidebar-content {active}">
+                    <div class="sidebar-contents-wrapper">
+                        <a href="/FlyingSpaghettiMonster/gallary" class="sidebar-link">
+                            <ion-icon name="images-outline" class="sidebar-icon"></ion-icon> 페이지 아이콘
+                            <span class="sidebar-name">{페이지 이름}</span>
+                        </a>
+                        <div class="sidebar-link-expandBtn">
+                            <ion-icon name="chevron-down-outline"></ion-icon>
+                        </div>
+                    </div>
+
+                    <ul class="sidebar-list">
+                        <li class="sidebar-list-element {active}">
+                            <a>{세부 페이지 이름}</a>
+                        </li>
+                        <li class="sidebar-list-element {active}">
+                            <a>{세부 페이지 이름}</a>
+                        </li>
+                    </ul>
+                </div>
+                -->
 
 
                 <div class="sidebar-content active">
@@ -47,12 +89,16 @@
                             <ion-icon name="chevron-down-outline"></ion-icon>
                         </div>
                     </div>
+
                     <ul class="sidebar-list">
                         <li class="sidebar-list-element">
-                            <a class="sidebar-list-element-link">르네상스</a>
+                            <a href="/FlyingSpaghettiMonster/gallary/노천웅">노천웅</a>
                         </li>
                         <li class="sidebar-list-element">
-                            <a class="sidebar-list-element-link">현대미술</a>
+                            <a href="/FlyingSpaghettiMonster/gallary/MarkRothko/">Mark Rothko</a>
+                        </li>
+                        <li class="sidebar-list-element">
+                            <a href="/FlyingSpaghettiMonster/gallary/Banksy">Banksy</a>
                         </li>
                     </ul>
                 </div>
@@ -68,12 +114,13 @@
                             <ion-icon name="chevron-down-outline"></ion-icon>
                         </div>
                     </div>
+
                     <ul class="sidebar-list">
                         <li class="sidebar-list-element">
-                            <a class="sidebar-list-element-link">불교</a>
+                            <a href="/FlyingSpaghettiMonster/heritage/buddhism">불교</a>
                         </li>
                         <li class="sidebar-list-element">
-                            <a class="sidebar-list-element-link">기독교</a>
+                            <a href="/FlyingSpaghettiMonster/heritage/christian">기독교</a>
                         </li>
                     </ul>
                 </div>
@@ -89,46 +136,69 @@
 
             </div>
         </div>
+        <!--/사이드바-->
 
 
 
         <!--메인-->
-        <!--여기서부터 작성하면 됨-->
+
+
+
+        <!--제목-->
         <header class="mainpage-header card-glass" id="top">
             <h1>온라인 박물관</h1>
         </header>
+
+
+
+        <!--메인-->
         <main>
             <div class="div-table">
+
+
+                <!--
                 <div class="div-table-col">
                     <div id="gallary" class="mainpage-contents card-glass">
                         <i class="icon-contentspreview fas fa-image"></i>
+                        <h3>{카드 이름}</h3>
+                    </div>
+                </div>
+                -->
+
+
+                <div class="div-table-col">
+                    <div id="gallary" onclick="locate(this);" class="mainpage-contents card-glass">
+                        <img src="https://media.discordapp.net/attachments/882826334701776920/905106268686016583/4.png">
                         <h3>갤러리</h3>
                     </div>
                 </div>
-                
+
+
                 <div class="div-table-col">
-                    <div id="heritage" class="mainpage-contents card-glass">
-                        <i class="icon-contentspreview fas fa-ankh"></i>
+                    <div id="heritage" onclick="locate(this);" class="mainpage-contents card-glass">
+                        <img src="https://media.discordapp.net/attachments/882826334701776920/905106268686016583/4.png">
                         <h3>3D 유물 조회</h3>
                     </div>
                 </div>
 
+
                 <div class="div-table-col">
-                    <div id="tour" class="mainpage-contents card-glass">
-                        <i class="icon-contentspreview fas fa-flag"></i>
+                    <div id="tour" onclick="locate(this);" class="mainpage-contents card-glass">
+                        <img src="https://media.discordapp.net/attachments/882826334701776920/905106268686016583/4.png">
                         <h3>온라인 투어</h3>
                     </div>
                 </div>
-                
+
+
                 <div class="div-table-col">
-                    <div id="contact" class="mainpage-contents card-glass">
-                        <i class="icon-contentspreview fas fa-code"></i>
+                    <div id="contact" onclick="locate(this);" class="mainpage-contents card-glass">
+                        <img src="https://media.discordapp.net/attachments/882826334701776920/905106268686016583/4.png">
                         <h3>만든 사람들</h3>
                     </div>
                 </div>
+
+
             </div>
-
-
         </main>
         <!--/메인-->
 
@@ -136,18 +206,8 @@
 
         <!-- IONICONS -->
         <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
-        <!--FontAwesome-->
-        <script src="https://kit.fontawesome.com/bfa60ca031.js" crossorigin="anonymous"></script>
         <!-- JS -->
         <script src="/FlyingSpaghettiMonster/js/sidebar.js"></script>
-        <script>
-            let mainpageCards =  document.getElementsByClassName("mainpage-contents")
-            for(var i=0; i<mainpageCards.length; i++){
-                console.log(mainpageCards[i])
-                mainpageCards[i].addEventListener("click", function(){
-                    location.href = "./" + this.getAttribute("id")
-                })
-            }
-        </script>
+        <script src="/FlyingSpaghettiMonster/js/functions.js"></script>
     </body>
 </html>

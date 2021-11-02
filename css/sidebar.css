@@ -1,3 +1,8 @@
+/*==========기본적인거==========*/
+
+
+
+/*폰트 : 에스코어 드림*/
 @font-face {
     font-family: 'S-CoreDream-3Light';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
@@ -5,31 +10,71 @@
     font-style: normal;
 }
 
+
+
 :root{
+    /*사이드바 너비*/
     --sidebar-width: 92px;
+
+    /*사이드바 배경 컬러*/
     --first-color: #121212;
+
+    /*사이드바 메인 컬러(active 등)*/
     --second-color: blue;
+
+    /*사이드바 텍스트 컬러*/
     --font-color:white;
 }
+
+
+
 *{
+    /*사용자 에이전트 스타일시트 무시*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    /*폰트 global 범위에서 적용*/
     font-family: 'S-CoreDream-3Light', sans-serif;
 }
 
 
+
+/*앵커 href 이동 부드럽게*/
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+/*사이드바와 겹치지 않게 조정 및 bg컬러 지정*/
+body{
+    margin-left: var(--sidebar-width);
+    background-color: #F2F4F6;
+}
+/*==========/기본적인거==========*/
+
+
+
+/*==========사이드바 디자인==========*/
+
+
+
 .sidebar{
+    /*사이드바 위치 항상 왼쪽에 고정*/
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
     width: var(--sidebar-width);
+
+    /*그 외 자질구레한거*/
     background-color: var(--first-color);
     padding: 1.5rem 1.5rem 2rem;
-    transition: all 0.3s ease-in-out;
     z-index: 100;
+    transition: all 0.3s ease-in-out;
 }
+/*텍스트 컬러 적용*/
 .sidebar *{
     color: var(--font-color);
 }
@@ -38,17 +83,22 @@
     text-decoration: none;
 }
 
+
+/*확장시 너비 넓히기*/
 .sidebar.expanded{
     width: calc(var(--sidebar-width) + 9.25rem)
 }
 
 
+/*icon 제외 숨김*/
 .sidebar-container{
     width: 100%;
     overflow: hidden;
 }
 
 
+
+/*제목 콘텐츠 디자인*/
 .sidebar-header{
     width: calc(var(--sidebar-width) + 9.25rem - 3rem);
     white-space: nowrap;
@@ -68,7 +118,7 @@
 
 
 
-
+/*콘텐츠들 디자인*/
 .sidebar-content{
     position: relative;
     width: calc(var(--sidebar-width) + 9.25rem - 3rem);
@@ -78,6 +128,8 @@
     justify-content: space-between;
     align-items: center;
 }
+
+/*왼쪽 hover 및 active 이펙트*/
 .sidebar-content::before{
     content: '';
     position: absolute;
@@ -104,29 +156,34 @@
     background-color: blue;
 }
 
+
 .sidebar-link{
-    white-space: nowrap;
+    width: 100%;
+    padding: 0.5em 0;
     display: flex;
     align-items: center;
+    white-space: nowrap;
 }
+
+/*아이콘*/
 .sidebar-icon{
     width: calc(var(--sidebar-width) - 3rem);
     text-align: center;
     font-size: 1.25rem;
 }
+/*콘텐츠 이름*/
 .sidebar-name{
     margin-left: 0.5rem;
 }
 
-.sidebar-link{
-    padding: 0.5em 0;
-    width: 100%;
-}
+
+/*확장형 콘텐츠 레이아웃*/
 .sidebar-contents-wrapper{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+/*리스트 펼치는 버튼*/
 .sidebar-link-expandBtn{
     width: 2em;
     height: 2em;
@@ -136,6 +193,11 @@
     cursor: pointer;
     transition: all 0.5s ease-in-out;
 }
+/*클릭시 돌아가는거*/
+.sidebar-link-expandBtn.rotate {
+    transform: rotate(180deg);
+    transition: .5s;
+}
 
 
 .sidebar-list{
@@ -143,45 +205,26 @@
     position: relative;
 }
 
+/*확장형 콘텐츠 리스트 디자인*/
+/*기본 height:0*/
 .sidebar-list-element{
-    overflow-y: hidden;
     height: 0;
-    transition: all 0.2s ease-in-out;
+    border-left: 2px solid gray;
+    padding-left: 0.5rem;
+    overflow-y: hidden;
     display: flex;
     align-items: center;
-    padding-left: 0.5rem;
-    border-left: 2px solid gray;
     transition: all 0.2s ease-in-out;
 }
-.sidebar-list-element.active{
-    border-left: 2px solid blue;
-}
-.sidebar-list-element:hover{
-    border-left-width: 5px;
-}
-.sidebar-list-element-link{
-    text-decoration: none;
-}
-
+/*확장 버튼 클릭시 height:1.5em*/
 .sidebar.expanded .sidebar-list.expanded .sidebar-list-element{
     height: 1.5em;
 }
-.sidebar-header-link{
-    text-decoration: none;
+/*active 시 컬러 변경*/
+.sidebar-list-element.active{
+    border-left: 2px solid blue;
 }
-
-.rotate {
-    transform: rotate(180deg);
-    transition: .5s;
-}
-
-
-
-html{
-    scroll-behavior: smooth;
-}
-
-body{
-    margin-left: var(--sidebar-width);
-    background-color: #F2F4F6;
+/*hover 시 border width 굵게*/
+.sidebar-list-element:hover{
+    border-left-width: 5px;
 }
