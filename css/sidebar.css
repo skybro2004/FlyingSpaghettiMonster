@@ -20,7 +20,7 @@
     --first-color: #121212;
 
     /*사이드바 메인 컬러(active 등)*/
-    --second-color: blue;
+    --second-color: rgb(30, 30, 126);
 
     /*사이드바 텍스트 컬러*/
     --font-color:white;
@@ -138,7 +138,7 @@ body{
     width: 3px;
     height: 0;
     border-radius: 5px;
-    background-color: blue;
+    background-color: var(--second-color);
     transition: all 0.2s ease-in-out;
 }
 .sidebar-content:hover::before{
@@ -153,7 +153,7 @@ body{
     width: 3px;
     height: 2.25rem;
     border-radius: 5px;
-    background-color: blue;
+    background-color: var(--second-color);
 }
 
 
@@ -222,7 +222,7 @@ body{
 }
 /*active 시 컬러 변경*/
 .sidebar-list-element.active{
-    border-left: 2px solid blue;
+    border-left: 2px solid var(--second-color);
 }
 /*hover 시 border width 굵게*/
 .sidebar-list-element:hover{
