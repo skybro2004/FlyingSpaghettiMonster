@@ -143,10 +143,10 @@
 
         <!--main-->
         <header>
-            <h3>3D 유물 조회</h3>
+            <h3>3D 문화유산</h3>
             <div class="title">
                 <h1>
-                    테마 선택
+                    시대 선택
                 </h1>
             </div>
         </header>
@@ -155,18 +155,27 @@
 
         <main>
 
-            <div id="buddhism" onclick="locate(this)" class="card-content card-glass">
-                <div class="thumbnail"></div>
-                <h2>불교</h2>
-                <p>불교 관련 유물들을 모은 카테고리입니다.</p>
+            <div class="node-container">
+                <div id="통일신라" class="node" onclick="locate(this)">
+                    <div class="title-wrapper">
+                        <div class="node-title">통일신라시대</div>
+                        <div class="node-title-info">676년 ~ 935년</div>
+                    </div>
+                </div>
+                <div id="고려" class="node" onclick="locate(this)">
+                    <div class="title-wrapper">
+                        <div class="node-title">고려시대</div>
+                        <div class="node-title-info">918년 ~ 1392년</div>
+                    </div>
+                </div>
+                <div id="조선" class="node" onclick="locate(this)">
+                    <div class="title-wrapper">
+                        <div class="node-title">조선시대</div>
+                        <div class="node-title-info">1392년 ~ 1897년</div>
+                    </div>
+                </div>
             </div>
 
-
-            <div id="christian" onclick="locate(this)" class="card-content card-glass">
-                <div class="thumbnail"></div>
-                <h2>기독교</h2>
-                <p>기독교 관련 유물들을 모은 카테고리입니다.</p>
-            </div>
 
         </main>
 

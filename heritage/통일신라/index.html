@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
 
         <meta charset="UTF-8">
@@ -8,16 +8,17 @@
         <link rel="icon" href="/FlyingSpaghettiMonster/resources/favicon.ico" type="image/x-icon">
 
         <!--title-->
-        <title>온라인 박물관</title>
+        <title>통일신라시대</title>
 
         <!-- CSS -->
         <link rel="stylesheet" href="/FlyingSpaghettiMonster/css/sidebar.css">
         <link rel="stylesheet" href="./css/index.css">
 
     </head>
+
+
+
     <body>
-
-
         <!--사이드바-->
         <div class="sidebar">
             <div class="sidebar-container">
@@ -71,7 +72,7 @@
                 -->
 
 
-                <div class="sidebar-content active">
+                <div class="sidebar-content">
                     <a href="/FlyingSpaghettiMonster/#" class="sidebar-link">
                         <ion-icon name="home-outline" class="sidebar-icon"></ion-icon>
                         <span class="sidebar-name">홈페이지</span>
@@ -104,11 +105,11 @@
                 </div>
 
 
-                <div class="sidebar-content">
+                <div class="sidebar-content active">
                     <div class="sidebar-contents-wrapper">
                         <a href="/FlyingSpaghettiMonster/heritage" class="sidebar-link">
                             <ion-icon name="bonfire-outline" class="sidebar-icon"></ion-icon>
-                            <span class="sidebar-name">3D 문화유산</span>
+                            <span class="sidebar-name">3D 유물 조회</span>
                         </a>
                         <div class="sidebar-link-expandBtn">
                             <ion-icon name="chevron-down-outline"></ion-icon>
@@ -116,7 +117,7 @@
                     </div>
 
                     <ul class="sidebar-list">
-                        <li class="sidebar-list-element">
+                        <li class="sidebar-list-element active">
                             <a href="/FlyingSpaghettiMonster/heritage/buddhism">불교</a>
                         </li>
                         <li class="sidebar-list-element">
@@ -141,74 +142,29 @@
 
 
         <!--메인-->
-
-
-
-        <!--header-->
-        <header class="mainpage-header card-glass" id="top">
-            <h1>온라인 박물관</h1>
-        </header>
-
-
-
-        <!--main-->
-        <main>
-            <div class="div-table">
-
-
-                <!--
-                <div class="div-table-col">
-                    <div id="gallary" class="mainpage-contents card-glass">
-                        <i class="icon-contentspreview fas fa-image"></i>
-                        <h3>{카드 이름}</h3>
-                    </div>
-                </div>
-                -->
-
-
-                <div class="div-table-col">
-                    <div id="gallary" onclick="locate(this);" class="mainpage-contents card-glass">
-                        <div class="img-wrapper">
-                            <img src="./resources/card-1.png">
-                        </div>
-                        <h2>갤러리</h2>
-                    </div>
-                </div>
-
-
-                <div class="div-table-col">
-                    <div id="heritage" onclick="locate(this);" class="mainpage-contents card-glass">
-                        <div class="img-wrapper">
-                            <img src="./resources/card-2.png">
-                        </div>
-                        <h2>3D 문화유산</h2>
-                    </div>
-                </div>
-
-
-                <div class="div-table-col">
-                    <div id="tour" onclick="locate(this);" class="mainpage-contents card-glass">
-                        <div class="img-wrapper">
-                            <img src="./resources/card-3.png">
-                        </div>
-                        <h2>온라인 투어</h2>
-                    </div>
-                </div>
-
-
-                <div class="div-table-col">
-                    <div id="contact" onclick="locate(this);" class="mainpage-contents card-glass">
-                        <div class="img-wrapper">
-                            <img src="./resources/card-4.png">
-                        </div>
-                        <h2>만든 사람들</h2>
-                    </div>
-                </div>
-
-
+        <!--여기서부터 작성하면 됨-->
+        <header>
+            <h3>통일신라시대 문화유산</h3>
+            <div class="title">
+                <h1>
+                    문화유산 선택
+                </h1>
             </div>
-        </main>
-        <!--/메인-->
+        </header>
+        
+        <div class="search">
+            <label>
+                필터 : 
+                <input type="text" id="search" onkeyup="filter()" placeholder="키워드를 입력하세요">
+            </label>
+        </div>
+        <div class="list">
+            <div class="list-element listner">보령 성주사지 낭혜화상탑비</div>
+            <div class="list-element listner">전 원주 흥법사지 염거화상탑</div>
+            <div class="list-element listner">안양 중초사지 당간지주</div>
+            <div class="list-element listner">고령 지산리 당간지주</div>
+        </div>
+
 
 
 
@@ -216,6 +172,7 @@
         <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
         <!-- JS -->
         <script src="/FlyingSpaghettiMonster/js/sidebar.js"></script>
-        <script src="/FlyingSpaghettiMonster/js/functions.js"></script>
+        <script src="./js/index.js"></script>
     </body>
+
 </html>

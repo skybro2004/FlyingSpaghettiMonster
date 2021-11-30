@@ -1,0 +1,87 @@
+body{
+    min-height: 100vh;
+    padding: 2em;
+}
+
+
+
+header{
+    width: 100%;
+    margin-bottom: 3em;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+
+
+.card-container{
+    width: 14rem;
+    height: 18rem;
+    position: relative;
+}
+.card-container::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 6rem;
+    background-color: #F2F4F6;
+    border-top: 2px solid black;
+    z-index: 2;
+}
+.card{
+    position: absolute;
+    left: 1rem;
+    top: 2rem;
+    width: 12rem;
+    height: 14rem;
+    padding: 0.5rem;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.37);
+    border-radius: 1px;
+    background-position-x: center;
+    background-position-y: top;
+    background-size: cover;
+    z-index: 1;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+#통일신라{
+    background-image: url("../resources/buddhism.png");
+}
+#고려{
+    background-image: url("https://media.discordapp.net/attachments/864387205036245083/915287477802127440/clips_20150820140400_1836.png");
+}
+#조선{
+    background-image: url("https://media.discordapp.net/attachments/864387205036245083/915289333701935184/asdf.jpg");
+}
+.card:hover{
+    top: 0;
+}
+.card h3{
+    background-color: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid black;
+    margin-bottom: 0.3rem;
+}
+.card span{
+    background-color: rgba(255, 255, 255, 0.6);
+    border-bottom: 1px solid black;
+    font-size: 90%;
+    word-break: keep-all;
+}

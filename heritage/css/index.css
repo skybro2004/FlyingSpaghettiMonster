@@ -1,26 +1,17 @@
-/*글래스모피즘 카드 디자인*/
-.card-glass{
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    backdrop-filter: blur( 6px );
-    -webkit-backdrop-filter: blur( 6px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-    transition: all 0.5s;
+html{
+    height: 100%;
 }
-.card-glass:hover{
-    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.6);
-}
-
-
-
 body{
-    padding: 2em;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
 
 
 
 header{
-    margin-bottom: 3em;
+    margin: 2em;
 }
 .title{
     display: flex;
@@ -32,10 +23,86 @@ header{
 
 
 main{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
+    height: auto;
+    flex: 1;
+}
+
+
+
+.node-container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: table;
+    table-layout: fixed;
+}
+.node-container::before{
+    content: "";
+    position: absolute;
+    top: calc(50% - 2px);
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background-color: black;
+}
+
+
+.node{
+    position: relative;
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.node::before{
+    content: "";
+    position: absolute;
+    left: calc(50% - 10px);
+    top: calc(50% - 10px);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    transition: all 0.2s;
+}
+.node:hover::before{
+    left: calc(50% - 20px);
+    top: calc(50% - 20px);
+    width: 40px;
+    height: 40px;
+}
+
+.title-wrapper{
+    position: absolute;
+    left: 50%;
+    top: calc(50% - 10px);
+    transform: translate(-50%, -100%);
+    transition: all 0.2s;
+}
+.node:hover .title-wrapper{
+    top: calc(50% - 20px);
+}
+
+.node-title{
+    text-align: center;
+    font-size: 1.4rem;
+    word-break: keep-all;
+    transition: all 0.2s;
+}
+.node:hover .node-title{
+    font-size: 2rem;
+}
+
+.node-title-info{
+    font-size: 0.1rem;
+    text-align: center;
+    overflow: hidden;
+    height: 0;
+    transition: all 0.2s;
+}
+.node:hover .node-title-info{
+    font-size: 1rem;
+    height: 2rem;
 }
 
 

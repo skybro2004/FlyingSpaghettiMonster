@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
 
         <meta charset="UTF-8">
@@ -8,16 +8,17 @@
         <link rel="icon" href="/FlyingSpaghettiMonster/resources/favicon.ico" type="image/x-icon">
 
         <!--title-->
-        <title>온라인 박물관</title>
+        <title>콘텐츠 준비중</title>
 
         <!-- CSS -->
         <link rel="stylesheet" href="/FlyingSpaghettiMonster/css/sidebar.css">
-        <link rel="stylesheet" href="./css/index.css">
+        <link rel="stylesheet" href="/FlyingSpaghettiMonster/css/tour.css">
 
     </head>
+
+
+
     <body>
-
-
         <!--사이드바-->
         <div class="sidebar">
             <div class="sidebar-container">
@@ -71,7 +72,7 @@
                 -->
 
 
-                <div class="sidebar-content active">
+                <div class="sidebar-content">
                     <a href="/FlyingSpaghettiMonster/#" class="sidebar-link">
                         <ion-icon name="home-outline" class="sidebar-icon"></ion-icon>
                         <span class="sidebar-name">홈페이지</span>
@@ -108,7 +109,7 @@
                     <div class="sidebar-contents-wrapper">
                         <a href="/FlyingSpaghettiMonster/heritage" class="sidebar-link">
                             <ion-icon name="bonfire-outline" class="sidebar-icon"></ion-icon>
-                            <span class="sidebar-name">3D 문화유산</span>
+                            <span class="sidebar-name">3D 유물 조회</span>
                         </a>
                         <div class="sidebar-link-expandBtn">
                             <ion-icon name="chevron-down-outline"></ion-icon>
@@ -140,82 +141,40 @@
 
 
 
-        <!--메인-->
+        <iframe id="iframe" src="/FlyingSpaghettiMonster/heritage/buddhism/"></iframe>
 
 
 
-        <!--header-->
-        <header class="mainpage-header card-glass" id="top">
-            <h1>온라인 박물관</h1>
-        </header>
+        <footer class="tour-nav">
+            <button class="tour-nav-button">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+            </button>
 
-
-
-        <!--main-->
-        <main>
-            <div class="div-table">
-
-
-                <!--
-                <div class="div-table-col">
-                    <div id="gallary" class="mainpage-contents card-glass">
-                        <i class="icon-contentspreview fas fa-image"></i>
-                        <h3>{카드 이름}</h3>
-                    </div>
+            <div class="progress-bar">
+                <div class="node">
+                    <span class="node-index">1</span>
                 </div>
-                -->
-
-
-                <div class="div-table-col">
-                    <div id="gallary" onclick="locate(this);" class="mainpage-contents card-glass">
-                        <div class="img-wrapper">
-                            <img src="./resources/card-1.png">
-                        </div>
-                        <h2>갤러리</h2>
-                    </div>
+                <div class="node">
+                    <span class="node-index">2</span>
                 </div>
-
-
-                <div class="div-table-col">
-                    <div id="heritage" onclick="locate(this);" class="mainpage-contents card-glass">
-                        <div class="img-wrapper">
-                            <img src="./resources/card-2.png">
-                        </div>
-                        <h2>3D 문화유산</h2>
-                    </div>
+                <div class="node active">
+                    <span class="node-index">3</span>
                 </div>
-
-
-                <div class="div-table-col">
-                    <div id="tour" onclick="locate(this);" class="mainpage-contents card-glass">
-                        <div class="img-wrapper">
-                            <img src="./resources/card-3.png">
-                        </div>
-                        <h2>온라인 투어</h2>
-                    </div>
+                <div class="node">
+                    <span class="node-index">4</span>
                 </div>
-
-
-                <div class="div-table-col">
-                    <div id="contact" onclick="locate(this);" class="mainpage-contents card-glass">
-                        <div class="img-wrapper">
-                            <img src="./resources/card-4.png">
-                        </div>
-                        <h2>만든 사람들</h2>
-                    </div>
-                </div>
-
-
             </div>
-        </main>
-        <!--/메인-->
+
+            <button class="tour-nav-button" onclick="nextPage()">
+                다음 
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+            </button>
+        </footer>
 
 
 
-        <!-- IONICONS -->
         <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
-        <!-- JS -->
         <script src="/FlyingSpaghettiMonster/js/sidebar.js"></script>
-        <script src="/FlyingSpaghettiMonster/js/functions.js"></script>
+        <script src="/FlyingSpaghettiMonster/js/tour.js"></script>
     </body>
 </html>

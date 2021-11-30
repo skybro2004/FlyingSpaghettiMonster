@@ -8,17 +8,16 @@
         <link rel="icon" href="/FlyingSpaghettiMonster/resources/favicon.ico" type="image/x-icon">
 
         <!--title-->
-        <title>콘텐츠 준비중</title>
+        <title>갤러리</title>
 
         <!-- CSS -->
         <link rel="stylesheet" href="/FlyingSpaghettiMonster/css/sidebar.css">
-        <link rel="stylesheet" href="/FlyingSpaghettiMonster/css/tour.css">
+        <link rel="stylesheet" href="./css/index.css">
 
     </head>
-
-
-
     <body>
+
+
         <!--사이드바-->
         <div class="sidebar">
             <div class="sidebar-container">
@@ -80,7 +79,7 @@
                 </div>
 
 
-                <div class="sidebar-content">
+                <div class="sidebar-content active">
                     <div class="sidebar-contents-wrapper">
                         <a href="/FlyingSpaghettiMonster/gallary" class="sidebar-link">
                             <ion-icon name="images-outline" class="sidebar-icon"></ion-icon>
@@ -141,40 +140,64 @@
 
 
 
-        <iframe id="iframe" src="/FlyingSpaghettiMonster/heritage/buddhism/"></iframe>
+        <!--header-->
+        <header>
+            <h3>온라인 투어</h3>
+            <div class="title">
+                <h1>
+                    투어 선택
+                </h1>
+            </div>
+        </header>
 
 
 
-        <footer class="tour-nav">
-            <button class="tour-nav-button">
-                <ion-icon name="chevron-back-outline"></ion-icon>
-            </button>
+        <!--main-->
+        <main>
 
-            <div class="progress-bar">
-                <div class="node">
-                    <span class="node-index">1</span>
+
+            <!--
+            <div id= "{href}" class="card-content">
+                <div class="card-title-prev">
+                    <h3>{카드 제목}</h3>
                 </div>
-                <div class="node">
-                    <span class="node-index">2</span>
+                <div class="card-title">
+                    <h3>{카드 제목}</h3>
                 </div>
-                <div class="node active">
-                    <span class="node-index">3</span>
-                </div>
-                <div class="node">
-                    <span class="node-index">4</span>
+            </div>
+            -->
+
+
+            <div class="card-container">
+                <div id= "통일신라" onclick="locate(this)" class="card">
+                    <h3>통일신라시대</h3>
+                    <span>통일신라시대의 문화유산들을 만나보세요</span>
                 </div>
             </div>
 
-            <button class="tour-nav-button" onclick="nextPage()">
-                다음 
-                <ion-icon name="chevron-forward-outline"></ion-icon>
-            </button>
-        </footer>
+
+            <div class="card-container">
+                <div id= "고려" onclick="locate(this)" class="card">
+                    <h3>고려시대</h3>
+                    <span>고려시대의 문화유산들을 만나보세요</span>
+                </div>
+            </div>
+
+
+            <div class="card-container">
+                <div id= "조선" onclick="locate(this)" class="card">
+                    <h3>조선시대</h3>
+                    <span>조선시대의 문화유산들을 만나보세요</span>
+                </div>
+            </div>
+        </main>
 
 
 
+        <!-- IONICONS -->
         <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+        <!-- JS -->
         <script src="/FlyingSpaghettiMonster/js/sidebar.js"></script>
-        <script src="/FlyingSpaghettiMonster/js/tour.js"></script>
+        <script src="/FlyingSpaghettiMonster/js/functions.js"></script>
     </body>
 </html>
