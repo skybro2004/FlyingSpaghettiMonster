@@ -12,14 +12,7 @@
 
         <!-- CSS -->
         <link rel="stylesheet" href="/FlyingSpaghettiMonster/css/sidebar.css">
-        <style>
-            body{
-                background-image: url("https://skybro2004.com/main/images/project-3.png");
-                background-size: cover;
-                background-position: center;
-                min-height: 100vh;
-            }
-        </style>
+        <link rel="stylesheet" href="/FlyingSpaghettiMonster/css/tour.css">
 
     </head>
 
@@ -148,7 +141,40 @@
 
 
 
+        <iframe id="iframe" src="/FlyingSpaghettiMonster/heritage/buddhism/"></iframe>
+
+
+
+        <footer class="tour-nav">
+            <button class="tour-nav-button">
+                <ion-icon name="chevron-back-outline"></ion-icon>
+            </button>
+
+            <div class="progress-bar">
+                <div class="node">
+                    <span class="node-index">1</span>
+                </div>
+                <div class="node">
+                    <span class="node-index">2</span>
+                </div>
+                <div class="node active">
+                    <span class="node-index">3</span>
+                </div>
+                <div class="node">
+                    <span class="node-index">4</span>
+                </div>
+            </div>
+
+            <button class="tour-nav-button" onclick="nextPage()">
+                다음 
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+            </button>
+        </footer>
+
+
+
         <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
         <script src="/FlyingSpaghettiMonster/js/sidebar.js"></script>
+        <script src="/FlyingSpaghettiMonster/js/tour.js"></script>
     </body>
 </html>
