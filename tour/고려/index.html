@@ -18,7 +18,7 @@
 
 
 
-    <body>
+    <body onunLoad="return window.location.replace(self.location);">
         <!--사이드바-->
         <div class="sidebar">
             <div class="sidebar-container">
@@ -141,27 +141,35 @@
 
 
 
-        <iframe id="iframe" src="/FlyingSpaghettiMonster/heritage/buddhism/"></iframe>
+        <iframe id="iframe" src="/FlyingSpaghettiMonster/heritage/통일신라/보령 성주사지 낭혜화상탑비"></iframe>
 
 
 
         <footer class="tour-nav">
-            <button class="tour-nav-button">
+            <button class="tour-nav-button" onclick="prevPage()">
                 <ion-icon name="chevron-back-outline"></ion-icon>
             </button>
 
             <div class="progress-bar">
-                <div class="node">
+                <div class="node current" src="/FlyingSpaghettiMonster/heritage/고려/천안 봉선홍경사 갈기비">
                     <span class="node-index">1</span>
+                    <label>천안 봉선홍경사 갈기비</label>
                 </div>
-                <div class="node">
+                <div class="node" src="/FlyingSpaghettiMonster/heritage/고려/경주 황남동 효자 손시양 정려비">
                     <span class="node-index">2</span>
+                    <label>경주 황남동 효자 손시양 정려비</label>
                 </div>
-                <div class="node active">
+                <div class="node" src="/FlyingSpaghettiMonster/heritage/고려/청자 양각죽절문 병">
                     <span class="node-index">3</span>
+                    <label>청자 양각죽절문 병</label>
                 </div>
-                <div class="node">
+                <div class="node" src="/FlyingSpaghettiMonster/heritage/고려/안동 하회탈">
                     <span class="node-index">4</span>
+                    <label>안동 하회탈</label>
+                </div>
+                <div class="node" src="/FlyingSpaghettiMonster/heritage/고려/익산 고도리 석조여래입상">
+                    <span class="node-index">5</span>
+                    <label>익산 고도리 석조여래입상</label>
                 </div>
             </div>
 

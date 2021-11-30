@@ -18,7 +18,7 @@
 
 
 
-    <body>
+    <body onunLoad="return window.location.replace(self.location);">
         <!--사이드바-->
         <div class="sidebar">
             <div class="sidebar-container">
@@ -141,27 +141,31 @@
 
 
 
-        <iframe id="iframe" src="/FlyingSpaghettiMonster/heritage/buddhism/"></iframe>
+        <iframe id="iframe" src="/FlyingSpaghettiMonster/heritage/통일신라/보령 성주사지 낭혜화상탑비"></iframe>
 
 
 
         <footer class="tour-nav">
-            <button class="tour-nav-button">
+            <button class="tour-nav-button" onclick="prevPage()">
                 <ion-icon name="chevron-back-outline"></ion-icon>
             </button>
 
             <div class="progress-bar">
-                <div class="node">
+                <div class="node current" src="/FlyingSpaghettiMonster/heritage/통일신라/안양 중초사지 당간지주">
                     <span class="node-index">1</span>
+                    <label>안양 중초사지 당간지주</label>
                 </div>
-                <div class="node">
+                <div class="node" src="/FlyingSpaghettiMonster/heritage/통일신라/전 원주 흥법사지 염거화상탑">
                     <span class="node-index">2</span>
+                    <label>전 원주 흥법사지 염거화상탑</label>
                 </div>
-                <div class="node active">
+                <div class="node" src="/FlyingSpaghettiMonster/heritage/통일신라/보령 성주사지 낭혜화상탑비">
                     <span class="node-index">3</span>
+                    <label>보령 성주사지 낭혜화상탑비</label>
                 </div>
-                <div class="node">
+                <div class="node" src="/FlyingSpaghettiMonster/heritage/통일신라/고령 지산리 당간지주">
                     <span class="node-index">4</span>
+                    <label>고령 지산리 당간지주</label>
                 </div>
             </div>
 
