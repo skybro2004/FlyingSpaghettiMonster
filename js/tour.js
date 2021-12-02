@@ -9,7 +9,7 @@ function nextPage(){
         pageIndex += 1
     
         let url = document.getElementsByClassName("node")[pageIndex].getAttribute("src")
-        document.getElementById("iframe").src = url
+        document.getElementById("iframe").contentDocument.location.replace(url);
         document.getElementsByClassName("node")[pageIndex].classList.add("current")
     }
     catch{
@@ -25,7 +25,7 @@ function prevPage(){
         pageIndex -= 1
     
         let url = document.getElementsByClassName("node")[pageIndex].getAttribute("src")
-        document.getElementById("iframe").src = url
+        document.getElementById("iframe").contentDocument.location.replace(url);
         document.getElementsByClassName("node")[pageIndex].classList.add("current")
     }
     catch(error){
@@ -33,8 +33,3 @@ function prevPage(){
         document.getElementsByClassName("node")[pageIndex].classList.add("current")
     }
 }
-
-
-
-
-
