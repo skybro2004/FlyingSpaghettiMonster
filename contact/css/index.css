@@ -34,6 +34,9 @@ header{
 #skybro2004 .card-member{
     background-image: url("../resources/skybro2004.jpg");
 }
+#skybro2004{
+    cursor: pointer;
+}
 #gimanga .card-member{
     background-image: url("../resources/gimanga.jpg");
 }
