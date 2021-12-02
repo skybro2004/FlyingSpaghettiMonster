@@ -18,7 +18,7 @@ header .title{
 /*작품 레이아웃 스타일1*/
 .content-style1{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     padding: 2em 10%;
     display: flex;
     flex-direction: column;
@@ -26,7 +26,23 @@ header .title{
 }
 .content-style1 img{
     width: 100%;
+    height: auto;
     border: 2px solid black;
+}
+.content-style1 iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.content-style1 .iframe{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-top: 56%;
+    border: 2px solid black;
+    margin-bottom: 0.5rem;
 }
 .content-style1 .content-wrapper{
     display: flex;

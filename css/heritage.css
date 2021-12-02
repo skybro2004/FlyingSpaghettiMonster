@@ -76,7 +76,7 @@ model-viewer {
     width:inherit;
     height: inherit;
     background-color: #DFE1E3;
-    --poster-color: #DFE1E3;
+    --poster-color: #ffffff;
     border: 3px solid black;
     border-radius: 5px;
 }

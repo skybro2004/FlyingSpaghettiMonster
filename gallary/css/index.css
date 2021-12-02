@@ -58,13 +58,16 @@ main{
 }
 
 /*카드별 배경이미지*/
-#노천웅.card-content{
+#노천웅{
     background-image: url("https://media.discordapp.net/attachments/864387205036245083/904550045381181472/99604C475EFBEA1E26.png");
+}
+#이규리{
+    background-image: url("https://media.discordapp.net/attachments/864387205036245083/915615320679526470/315b039975d10bac.jpg");
 }
 #MarkRothko{
     background-image: url("https://media.discordapp.net/attachments/864387205036245083/904550030927618098/20211101_104113.jpg");
 }
-#Banksy.card-content{
+#Banksy{
     background-image: url("https://media.discordapp.net/attachments/864387205036245083/904550013198290984/20211101_101910.jpg");
 }
 /*카드 hover시 이펙트*/
